@@ -8,27 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		6EA7448D26A17C8300FAAEF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */; };
-		6EA7449026A17C8300FAAEF1 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7448F26A17C8300FAAEF1 /* SceneDelegate.m */; };
-		6EA7449326A17C8300FAAEF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7449226A17C8300FAAEF1 /* ViewController.m */; };
-		6EA7449626A17C8300FAAEF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449426A17C8300FAAEF1 /* Main.storyboard */; };
 		6EA7449826A17C8600FAAEF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449726A17C8600FAAEF1 /* Assets.xcassets */; };
 		6EA7449B26A17C8600FAAEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449926A17C8600FAAEF1 /* LaunchScreen.storyboard */; };
 		6EA7449E26A17C8600FAAEF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7449D26A17C8600FAAEF1 /* main.m */; };
+		6EA744B326A17E7000FAAEF1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744B226A17E7000FAAEF1 /* MainViewController.m */; };
+		6EA744B726A1808700FAAEF1 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744B626A1808700FAAEF1 /* Main.xib */; };
+		6EA744C126A1837400FAAEF1 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744BA26A1830A00FAAEF1 /* Montserrat-Medium.ttf */; };
+		6EA744C226A1837400FAAEF1 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744BB26A1830A00FAAEF1 /* Montserrat-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6EA7448826A17C8300FAAEF1 /* RSSchool_T8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA7448B26A17C8300FAAEF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6EA7448E26A17C8300FAAEF1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		6EA7448F26A17C8300FAAEF1 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		6EA7449126A17C8300FAAEF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6EA7449226A17C8300FAAEF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6EA7449526A17C8300FAAEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6EA7449726A17C8600FAAEF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EA7449A26A17C8600FAAEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EA7449C26A17C8600FAAEF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA7449D26A17C8600FAAEF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6EA744B126A17E7000FAAEF1 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6EA744B226A17E7000FAAEF1 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6EA744B626A1808700FAAEF1 /* Main.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
+		6EA744BA26A1830A00FAAEF1 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.ttf"; path = "../../../../../Downloads/RSSchool_T8_Fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		6EA744BB26A1830A00FAAEF1 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../Downloads/RSSchool_T8_Fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +62,35 @@
 		6EA7448A26A17C8300FAAEF1 /* RSSchool_T8 */ = {
 			isa = PBXGroup;
 			children = (
-				6EA7448B26A17C8300FAAEF1 /* AppDelegate.h */,
-				6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */,
-				6EA7448E26A17C8300FAAEF1 /* SceneDelegate.h */,
-				6EA7448F26A17C8300FAAEF1 /* SceneDelegate.m */,
-				6EA7449126A17C8300FAAEF1 /* ViewController.h */,
-				6EA7449226A17C8300FAAEF1 /* ViewController.m */,
-				6EA7449426A17C8300FAAEF1 /* Main.storyboard */,
-				6EA7449726A17C8600FAAEF1 /* Assets.xcassets */,
-				6EA7449926A17C8600FAAEF1 /* LaunchScreen.storyboard */,
-				6EA7449C26A17C8600FAAEF1 /* Info.plist */,
-				6EA7449D26A17C8600FAAEF1 /* main.m */,
+				6EA744C426A189FE00FAAEF1 /* Application */,
+				6EA744B926A182EF00FAAEF1 /* Fonts */,
+				6EA744B126A17E7000FAAEF1 /* MainViewController.h */,
+				6EA744B626A1808700FAAEF1 /* Main.xib */,
+				6EA744B226A17E7000FAAEF1 /* MainViewController.m */,
 			);
 			path = RSSchool_T8;
+			sourceTree = "<group>";
+		};
+		6EA744B926A182EF00FAAEF1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6EA744BA26A1830A00FAAEF1 /* Montserrat-Medium.ttf */,
+				6EA744BB26A1830A00FAAEF1 /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6EA744C426A189FE00FAAEF1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6EA7449D26A17C8600FAAEF1 /* main.m */,
+				6EA7449C26A17C8600FAAEF1 /* Info.plist */,
+				6EA7449726A17C8600FAAEF1 /* Assets.xcassets */,
+				6EA7449926A17C8600FAAEF1 /* LaunchScreen.storyboard */,
+				6EA7448B26A17C8300FAAEF1 /* AppDelegate.h */,
+				6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EA7449B26A17C8600FAAEF1 /* LaunchScreen.storyboard in Resources */,
+				6EA744B726A1808700FAAEF1 /* Main.xib in Resources */,
+				6EA744C126A1837400FAAEF1 /* Montserrat-Medium.ttf in Resources */,
+				6EA744C226A1837400FAAEF1 /* Montserrat-Regular.ttf in Resources */,
 				6EA7449826A17C8600FAAEF1 /* Assets.xcassets in Resources */,
-				6EA7449626A17C8300FAAEF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,24 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EA7449326A17C8300FAAEF1 /* ViewController.m in Sources */,
 				6EA7448D26A17C8300FAAEF1 /* AppDelegate.m in Sources */,
+				6EA744B326A17E7000FAAEF1 /* MainViewController.m in Sources */,
 				6EA7449E26A17C8600FAAEF1 /* main.m in Sources */,
-				6EA7449026A17C8300FAAEF1 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6EA7449426A17C8300FAAEF1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6EA7449526A17C8300FAAEF1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6EA7449926A17C8600FAAEF1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97TSG2SA93;
 				INFOPLIST_FILE = RSSchool_T8/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97TSG2SA93;
 				INFOPLIST_FILE = RSSchool_T8/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

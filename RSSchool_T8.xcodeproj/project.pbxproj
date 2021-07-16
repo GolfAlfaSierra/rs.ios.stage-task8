@@ -11,10 +11,11 @@
 		6EA7449826A17C8600FAAEF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449726A17C8600FAAEF1 /* Assets.xcassets */; };
 		6EA7449B26A17C8600FAAEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449926A17C8600FAAEF1 /* LaunchScreen.storyboard */; };
 		6EA7449E26A17C8600FAAEF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7449D26A17C8600FAAEF1 /* main.m */; };
-		6EA744B326A17E7000FAAEF1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744B226A17E7000FAAEF1 /* MainViewController.m */; };
-		6EA744B726A1808700FAAEF1 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744B626A1808700FAAEF1 /* Main.xib */; };
+		6EA744B326A17E7000FAAEF1 /* ArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */; };
+		6EA744B726A1808700FAAEF1 /* Artist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744B626A1808700FAAEF1 /* Artist.xib */; };
 		6EA744C126A1837400FAAEF1 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744BA26A1830A00FAAEF1 /* Montserrat-Medium.ttf */; };
 		6EA744C226A1837400FAAEF1 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744BB26A1830A00FAAEF1 /* Montserrat-Regular.ttf */; };
+		6EA744D626A1E5FC00FAAEF1 /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +26,13 @@
 		6EA7449A26A17C8600FAAEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EA7449C26A17C8600FAAEF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EA7449D26A17C8600FAAEF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6EA744B126A17E7000FAAEF1 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		6EA744B226A17E7000FAAEF1 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		6EA744B626A1808700FAAEF1 /* Main.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
+		6EA744B126A17E7000FAAEF1 /* ArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistViewController.h; sourceTree = "<group>"; };
+		6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistViewController.m; sourceTree = "<group>"; };
+		6EA744B626A1808700FAAEF1 /* Artist.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Artist.xib; sourceTree = "<group>"; };
 		6EA744BA26A1830A00FAAEF1 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.ttf"; path = "../../../../../Downloads/RSSchool_T8_Fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		6EA744BB26A1830A00FAAEF1 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../Downloads/RSSchool_T8_Fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		6EA744D426A1E5FC00FAAEF1 /* UIColor+AppColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColor.h"; sourceTree = "<group>"; };
+		6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +65,10 @@
 		6EA7448A26A17C8300FAAEF1 /* RSSchool_T8 */ = {
 			isa = PBXGroup;
 			children = (
+				6EA744CF26A1A71300FAAEF1 /* Components */,
 				6EA744C426A189FE00FAAEF1 /* Application */,
 				6EA744B926A182EF00FAAEF1 /* Fonts */,
-				6EA744B126A17E7000FAAEF1 /* MainViewController.h */,
-				6EA744B626A1808700FAAEF1 /* Main.xib */,
-				6EA744B226A17E7000FAAEF1 /* MainViewController.m */,
+				6EA744D826A1E6B600FAAEF1 /* Categories */,
 			);
 			path = RSSchool_T8;
 			sourceTree = "<group>";
@@ -91,6 +93,25 @@
 				6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		6EA744CF26A1A71300FAAEF1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6EA744B126A17E7000FAAEF1 /* ArtistViewController.h */,
+				6EA744B626A1808700FAAEF1 /* Artist.xib */,
+				6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6EA744D826A1E6B600FAAEF1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				6EA744D426A1E5FC00FAAEF1 /* UIColor+AppColor.h */,
+				6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EA7449B26A17C8600FAAEF1 /* LaunchScreen.storyboard in Resources */,
-				6EA744B726A1808700FAAEF1 /* Main.xib in Resources */,
+				6EA744B726A1808700FAAEF1 /* Artist.xib in Resources */,
 				6EA744C126A1837400FAAEF1 /* Montserrat-Medium.ttf in Resources */,
 				6EA744C226A1837400FAAEF1 /* Montserrat-Regular.ttf in Resources */,
 				6EA7449826A17C8600FAAEF1 /* Assets.xcassets in Resources */,
@@ -165,7 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EA7448D26A17C8300FAAEF1 /* AppDelegate.m in Sources */,
-				6EA744B326A17E7000FAAEF1 /* MainViewController.m in Sources */,
+				6EA744D626A1E5FC00FAAEF1 /* UIColor+AppColor.m in Sources */,
+				6EA744B326A17E7000FAAEF1 /* ArtistViewController.m in Sources */,
 				6EA7449E26A17C8600FAAEF1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -288,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -303,7 +325,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97TSG2SA93;
-				INFOPLIST_FILE = RSSchool_T8/Info.plist;
+				INFOPLIST_FILE = RSSchool_T8/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -322,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97TSG2SA93;
-				INFOPLIST_FILE = RSSchool_T8/Info.plist;
+				INFOPLIST_FILE = RSSchool_T8/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

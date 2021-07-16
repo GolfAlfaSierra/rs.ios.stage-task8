@@ -6,10 +6,11 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+#import "ArtistViewController.h"
 
 @interface AppDelegate ()
 
+@property (strong, nonatomic) UINavigationController *navigationController;
 
 
 @end
@@ -21,8 +22,11 @@
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    MainViewController *rootVC = [[MainViewController alloc] initWithNibName:@"Main" bundle:nil];
-    [window setRootViewController:rootVC];
+    ArtistViewController *firstVC = [[ArtistViewController alloc] initWithNibName:@"Artist" bundle:nil];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:firstVC];
+    
+    
+    [window setRootViewController:self.navigationController];
     
     self.window = window;
     [self.window makeKeyAndVisible];

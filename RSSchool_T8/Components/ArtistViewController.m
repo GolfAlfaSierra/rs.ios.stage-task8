@@ -46,7 +46,7 @@
                                            [UIColor lightGreenSeaColor], NSForegroundColorAttributeName,
                                            nil]
                                  forState:UIControlStateHighlighted];
-    self.navigationController.navigationBar.topItem.rightBarButtonItem = barButtonItem;
+    self.navigationItem.rightBarButtonItem = barButtonItem;
 }
 
 

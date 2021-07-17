@@ -17,6 +17,8 @@
 		6EA744C226A1837400FAAEF1 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744BB26A1830A00FAAEF1 /* Montserrat-Regular.ttf */; };
 		6EA744D626A1E5FC00FAAEF1 /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */; };
 		6EA744E026A2F58200FAAEF1 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744DF26A2F58200FAAEF1 /* CanvasView.m */; };
+		6EA744F126A2FD7500FAAEF1 /* ArtistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744F026A2FD7500FAAEF1 /* ArtistView.m */; };
+		6EA744FE26A3125E00FAAEF1 /* UIButton+AppButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744FD26A3125E00FAAEF1 /* UIButton+AppButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColor.m"; sourceTree = "<group>"; };
 		6EA744DE26A2F58200FAAEF1 /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
 		6EA744DF26A2F58200FAAEF1 /* CanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
+		6EA744EF26A2FD7500FAAEF1 /* ArtistView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistView.h; sourceTree = "<group>"; };
+		6EA744F026A2FD7500FAAEF1 /* ArtistView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistView.m; sourceTree = "<group>"; };
+		6EA744FC26A3125E00FAAEF1 /* UIButton+AppButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+AppButton.h"; sourceTree = "<group>"; };
+		6EA744FD26A3125E00FAAEF1 /* UIButton+AppButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AppButton.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +107,7 @@
 		6EA744CF26A1A71300FAAEF1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6EA744B126A17E7000FAAEF1 /* ArtistViewController.h */,
-				6EA744B626A1808700FAAEF1 /* Artist.xib */,
-				6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */,
-				6EA744DE26A2F58200FAAEF1 /* CanvasView.h */,
-				6EA744DF26A2F58200FAAEF1 /* CanvasView.m */,
+				6EA744F726A2FD9500FAAEF1 /* Artist */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -117,6 +119,30 @@
 				6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		6EA744F726A2FD9500FAAEF1 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				6EA744B126A17E7000FAAEF1 /* ArtistViewController.h */,
+				6EA744B626A1808700FAAEF1 /* Artist.xib */,
+				6EA744EF26A2FD7500FAAEF1 /* ArtistView.h */,
+				6EA744F026A2FD7500FAAEF1 /* ArtistView.m */,
+				6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */,
+				6EA744F926A2FDB000FAAEF1 /* Canvas */,
+				6EA744FC26A3125E00FAAEF1 /* UIButton+AppButton.h */,
+				6EA744FD26A3125E00FAAEF1 /* UIButton+AppButton.m */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		6EA744F926A2FDB000FAAEF1 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				6EA744DE26A2F58200FAAEF1 /* CanvasView.h */,
+				6EA744DF26A2F58200FAAEF1 /* CanvasView.m */,
+			);
+			path = Canvas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +219,8 @@
 				6EA7448D26A17C8300FAAEF1 /* AppDelegate.m in Sources */,
 				6EA744D626A1E5FC00FAAEF1 /* UIColor+AppColor.m in Sources */,
 				6EA744B326A17E7000FAAEF1 /* ArtistViewController.m in Sources */,
+				6EA744F126A2FD7500FAAEF1 /* ArtistView.m in Sources */,
+				6EA744FE26A3125E00FAAEF1 /* UIButton+AppButton.m in Sources */,
 				6EA7449E26A17C8600FAAEF1 /* main.m in Sources */,
 				6EA744E026A2F58200FAAEF1 /* CanvasView.m in Sources */,
 			);

@@ -16,6 +16,7 @@
 		6EA744C126A1837400FAAEF1 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744BA26A1830A00FAAEF1 /* Montserrat-Medium.ttf */; };
 		6EA744C226A1837400FAAEF1 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744BB26A1830A00FAAEF1 /* Montserrat-Regular.ttf */; };
 		6EA744D626A1E5FC00FAAEF1 /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */; };
+		6EA744E026A2F58200FAAEF1 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744DF26A2F58200FAAEF1 /* CanvasView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		6EA744BB26A1830A00FAAEF1 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../Downloads/RSSchool_T8_Fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		6EA744D426A1E5FC00FAAEF1 /* UIColor+AppColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColor.h"; sourceTree = "<group>"; };
 		6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColor.m"; sourceTree = "<group>"; };
+		6EA744DE26A2F58200FAAEF1 /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
+		6EA744DF26A2F58200FAAEF1 /* CanvasView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				6EA744B126A17E7000FAAEF1 /* ArtistViewController.h */,
 				6EA744B626A1808700FAAEF1 /* Artist.xib */,
 				6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */,
+				6EA744DE26A2F58200FAAEF1 /* CanvasView.h */,
+				6EA744DF26A2F58200FAAEF1 /* CanvasView.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				6EA744D626A1E5FC00FAAEF1 /* UIColor+AppColor.m in Sources */,
 				6EA744B326A17E7000FAAEF1 /* ArtistViewController.m in Sources */,
 				6EA7449E26A17C8600FAAEF1 /* main.m in Sources */,
+				6EA744E026A2F58200FAAEF1 /* CanvasView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

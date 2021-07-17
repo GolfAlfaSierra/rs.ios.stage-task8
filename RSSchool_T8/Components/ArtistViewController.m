@@ -7,8 +7,10 @@
 
 #import "ArtistViewController.h"
 #import "UIColor+AppColor.h"
+#import "CanvasView.h"
 
 @interface ArtistViewController ()
+@property (weak, nonatomic) IBOutlet CanvasView *canvas;
 
 @end
 

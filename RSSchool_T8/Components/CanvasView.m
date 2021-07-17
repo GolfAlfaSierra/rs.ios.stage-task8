@@ -19,7 +19,7 @@
     [[self layer] setShadowOffset:CGSizeZero];
     [[self layer] setShadowOpacity:0.25];
     [[self layer] setShadowColor:[UIColor chillSkyColor].CGColor];
-    [[self layer] setShadowRadius:10];
+    [[self layer] setShadowRadius:8];
 }
 
 /*

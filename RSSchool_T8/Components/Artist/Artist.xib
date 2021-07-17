@@ -15,6 +15,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArtistViewController">
             <connections>
+                <outlet property="DrawButton" destination="1p6-Ir-Qpy" id="mDI-rh-KKw"/>
+                <outlet property="PaletteButton" destination="agK-5G-aKT" id="s9d-Tc-E4H"/>
+                <outlet property="ShareButton" destination="93z-6t-DIc" id="D88-Bd-764"/>
+                <outlet property="TimerButton" destination="3kZ-Gw-m3B" id="GuM-sd-EOX"/>
                 <outlet property="canvas" destination="ZTL-bq-0PQ" id="WZR-1y-WvO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="mqg-A6-BPB"/>
             </connections>

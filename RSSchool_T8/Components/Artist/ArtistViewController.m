@@ -11,6 +11,10 @@
 
 @interface ArtistViewController ()
 @property (weak, nonatomic) IBOutlet CanvasView *canvas;
+@property (weak, nonatomic) IBOutlet UIButton *ShareButton;
+@property (weak, nonatomic) IBOutlet UIButton *TimerButton;
+@property (weak, nonatomic) IBOutlet UIButton *PaletteButton;
+@property (weak, nonatomic) IBOutlet UIButton *DrawButton;
 
 @end
 
@@ -19,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavigation];
+    
+    
+    [self.ShareButton setEnabled:NO];
     
     // Do any additional setup after loading the view.
 }

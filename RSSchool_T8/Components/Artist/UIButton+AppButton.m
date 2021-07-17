@@ -6,7 +6,7 @@
 //
 
 #import "UIButton+AppButton.h"
-
+#import "UIColor+AppColor.h"
 
 
 @implementation UIButton (AppButton)
@@ -23,8 +23,23 @@
     [self.layer setShadowOpacity:0.25];
     [self.layer setShadowColor:[UIColor blackColor].CGColor];
     [self.layer setShadowRadius:1];
-    
-    
 }
 
+- (void)setHighlighted:(BOOL)highlighted{
+    if (highlighted) {
+    [self.layer setShadowColor:[UIColor lightGreenSeaColor].CGColor];
+    } else {
+        [self.layer setShadowColor:[UIColor blackColor].CGColor];
+    }
+}
+
+- (void)setEnabled:(BOOL)enabled{
+    if (!enabled) {
+        [self setAlpha:0.5];
+        [self setUserInteractionEnabled:NO];
+    } else {
+        [self setAlpha:1];
+        [self setUserInteractionEnabled:YES];
+    }
+}
 @end

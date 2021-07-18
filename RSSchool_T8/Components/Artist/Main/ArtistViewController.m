@@ -7,7 +7,8 @@
 
 #import "ArtistViewController.h"
 #import "UIColor+AppColor.h"
-#import "Canvas/CanvasView.h"
+#import "CanvasView.h"
+#import "PalleteViewController.h"
 
 @interface ArtistViewController ()
 @property (weak, nonatomic) IBOutlet CanvasView *canvas;
@@ -25,9 +26,28 @@
     [self setupNavigation];
     
     
+    
+    
+    [self.PaletteButton addTarget:self action:@selector(showPallete) forControlEvents:UIControlEventTouchUpInside];
+    
+    
     [self.ShareButton setEnabled:NO];
     
     // Do any additional setup after loading the view.
+}
+
+
+
+
+-(void)showPallete{
+    
+    PalleteViewController *vc = [[PalleteViewController alloc] initWithNibName:@"Pallete" bundle:nil];
+    
+    vc.modalPresentationStyle = UIModalPresentationCustom;
+    
+    vc.transitioningDelegate = vc;
+    
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 -(void)setupNavigation{

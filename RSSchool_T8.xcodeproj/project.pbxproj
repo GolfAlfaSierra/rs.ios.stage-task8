@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E3DA91826A41D1100B52834 /* PalleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA91726A41D1100B52834 /* PalleteViewController.m */; };
+		6E3DA91F26A4222C00B52834 /* Pallete.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3DA91E26A4222C00B52834 /* Pallete.xib */; };
+		6E3DA92A26A4728B00B52834 /* HalfPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA92926A4728B00B52834 /* HalfPresentationController.m */; };
 		6EA7448D26A17C8300FAAEF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */; };
 		6EA7449826A17C8600FAAEF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449726A17C8600FAAEF1 /* Assets.xcassets */; };
 		6EA7449B26A17C8600FAAEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449926A17C8600FAAEF1 /* LaunchScreen.storyboard */; };
@@ -22,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E3DA91626A41D1100B52834 /* PalleteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PalleteViewController.h; sourceTree = "<group>"; };
+		6E3DA91726A41D1100B52834 /* PalleteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PalleteViewController.m; sourceTree = "<group>"; };
+		6E3DA91E26A4222C00B52834 /* Pallete.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pallete.xib; sourceTree = "<group>"; };
+		6E3DA92826A4728B00B52834 /* HalfPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HalfPresentationController.h; sourceTree = "<group>"; };
+		6E3DA92926A4728B00B52834 /* HalfPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HalfPresentationController.m; sourceTree = "<group>"; };
 		6EA7448826A17C8300FAAEF1 /* RSSchool_T8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA7448B26A17C8300FAAEF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,6 +63,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E3DA92626A4550E00B52834 /* Pallete */ = {
+			isa = PBXGroup;
+			children = (
+				6E3DA91626A41D1100B52834 /* PalleteViewController.h */,
+				6E3DA91E26A4222C00B52834 /* Pallete.xib */,
+				6E3DA91726A41D1100B52834 /* PalleteViewController.m */,
+				6E3DA92826A4728B00B52834 /* HalfPresentationController.h */,
+				6E3DA92926A4728B00B52834 /* HalfPresentationController.m */,
+			);
+			path = Pallete;
+			sourceTree = "<group>";
+		};
+		6E3DA92C26A473D800B52834 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6EA744B126A17E7000FAAEF1 /* ArtistViewController.h */,
+				6EA744B626A1808700FAAEF1 /* Artist.xib */,
+				6EA744EF26A2FD7500FAAEF1 /* ArtistView.h */,
+				6EA744F026A2FD7500FAAEF1 /* ArtistView.m */,
+				6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		6EA7447F26A17C8300FAAEF1 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +147,8 @@
 		6EA744D826A1E6B600FAAEF1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				6EA744FC26A3125E00FAAEF1 /* UIButton+AppButton.h */,
+				6EA744FD26A3125E00FAAEF1 /* UIButton+AppButton.m */,
 				6EA744D426A1E5FC00FAAEF1 /* UIColor+AppColor.h */,
 				6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */,
 			);
@@ -124,14 +158,9 @@
 		6EA744F726A2FD9500FAAEF1 /* Artist */ = {
 			isa = PBXGroup;
 			children = (
-				6EA744B126A17E7000FAAEF1 /* ArtistViewController.h */,
-				6EA744B626A1808700FAAEF1 /* Artist.xib */,
-				6EA744EF26A2FD7500FAAEF1 /* ArtistView.h */,
-				6EA744F026A2FD7500FAAEF1 /* ArtistView.m */,
-				6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */,
+				6E3DA92C26A473D800B52834 /* Main */,
+				6E3DA92626A4550E00B52834 /* Pallete */,
 				6EA744F926A2FDB000FAAEF1 /* Canvas */,
-				6EA744FC26A3125E00FAAEF1 /* UIButton+AppButton.h */,
-				6EA744FD26A3125E00FAAEF1 /* UIButton+AppButton.m */,
 			);
 			path = Artist;
 			sourceTree = "<group>";
@@ -202,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EA7449B26A17C8600FAAEF1 /* LaunchScreen.storyboard in Resources */,
+				6E3DA91F26A4222C00B52834 /* Pallete.xib in Resources */,
 				6EA744B726A1808700FAAEF1 /* Artist.xib in Resources */,
 				6EA744C126A1837400FAAEF1 /* Montserrat-Medium.ttf in Resources */,
 				6EA744C226A1837400FAAEF1 /* Montserrat-Regular.ttf in Resources */,
@@ -216,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3DA91826A41D1100B52834 /* PalleteViewController.m in Sources */,
 				6EA7448D26A17C8300FAAEF1 /* AppDelegate.m in Sources */,
 				6EA744D626A1E5FC00FAAEF1 /* UIColor+AppColor.m in Sources */,
 				6EA744B326A17E7000FAAEF1 /* ArtistViewController.m in Sources */,
@@ -223,6 +254,7 @@
 				6EA744FE26A3125E00FAAEF1 /* UIButton+AppButton.m in Sources */,
 				6EA7449E26A17C8600FAAEF1 /* main.m in Sources */,
 				6EA744E026A2F58200FAAEF1 /* CanvasView.m in Sources */,
+				6E3DA92A26A4728B00B52834 /* HalfPresentationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

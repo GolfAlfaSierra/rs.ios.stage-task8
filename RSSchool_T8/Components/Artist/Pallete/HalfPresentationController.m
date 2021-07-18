@@ -14,7 +14,7 @@
 - (CGRect)frameOfPresentedViewInContainerView{
     CGSize bounds = self.containerView.bounds.size;
     
-    return CGRectMake(0, bounds.height /2 , bounds.width, bounds.height /2);
+    return CGRectMake(0, bounds.height /2 , bounds.width, bounds.height /1.5);
 }
 
 @end

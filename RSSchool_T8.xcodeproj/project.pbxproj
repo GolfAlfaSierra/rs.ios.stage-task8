@@ -10,6 +10,9 @@
 		6E3DA91826A41D1100B52834 /* PalleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA91726A41D1100B52834 /* PalleteViewController.m */; };
 		6E3DA91F26A4222C00B52834 /* Pallete.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3DA91E26A4222C00B52834 /* Pallete.xib */; };
 		6E3DA92A26A4728B00B52834 /* HalfPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA92926A4728B00B52834 /* HalfPresentationController.m */; };
+		6E3DA93626A4794B00B52834 /* PalleteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA93526A4794B00B52834 /* PalleteView.m */; };
+		6E3DA94426A49C5200B52834 /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA94326A49C5200B52834 /* ColorButton.m */; };
+		6E3DA94826A49E1400B52834 /* BaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA94726A49E1400B52834 /* BaseButton.m */; };
 		6EA7448D26A17C8300FAAEF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */; };
 		6EA7449826A17C8600FAAEF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449726A17C8600FAAEF1 /* Assets.xcassets */; };
 		6EA7449B26A17C8600FAAEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449926A17C8600FAAEF1 /* LaunchScreen.storyboard */; };
@@ -30,6 +33,12 @@
 		6E3DA91E26A4222C00B52834 /* Pallete.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pallete.xib; sourceTree = "<group>"; };
 		6E3DA92826A4728B00B52834 /* HalfPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HalfPresentationController.h; sourceTree = "<group>"; };
 		6E3DA92926A4728B00B52834 /* HalfPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HalfPresentationController.m; sourceTree = "<group>"; };
+		6E3DA93426A4794B00B52834 /* PalleteView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PalleteView.h; sourceTree = "<group>"; };
+		6E3DA93526A4794B00B52834 /* PalleteView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PalleteView.m; sourceTree = "<group>"; };
+		6E3DA94226A49C5200B52834 /* ColorButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorButton.h; sourceTree = "<group>"; };
+		6E3DA94326A49C5200B52834 /* ColorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorButton.m; sourceTree = "<group>"; };
+		6E3DA94626A49E1400B52834 /* BaseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseButton.h; sourceTree = "<group>"; };
+		6E3DA94726A49E1400B52834 /* BaseButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseButton.m; sourceTree = "<group>"; };
 		6EA7448826A17C8300FAAEF1 /* RSSchool_T8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA7448B26A17C8300FAAEF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -68,9 +77,13 @@
 			children = (
 				6E3DA91626A41D1100B52834 /* PalleteViewController.h */,
 				6E3DA91E26A4222C00B52834 /* Pallete.xib */,
+				6E3DA93426A4794B00B52834 /* PalleteView.h */,
+				6E3DA93526A4794B00B52834 /* PalleteView.m */,
 				6E3DA91726A41D1100B52834 /* PalleteViewController.m */,
 				6E3DA92826A4728B00B52834 /* HalfPresentationController.h */,
 				6E3DA92926A4728B00B52834 /* HalfPresentationController.m */,
+				6E3DA94226A49C5200B52834 /* ColorButton.h */,
+				6E3DA94326A49C5200B52834 /* ColorButton.m */,
 			);
 			path = Pallete;
 			sourceTree = "<group>";
@@ -83,6 +96,8 @@
 				6EA744EF26A2FD7500FAAEF1 /* ArtistView.h */,
 				6EA744F026A2FD7500FAAEF1 /* ArtistView.m */,
 				6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */,
+				6E3DA94626A49E1400B52834 /* BaseButton.h */,
+				6E3DA94726A49E1400B52834 /* BaseButton.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -248,12 +263,15 @@
 			files = (
 				6E3DA91826A41D1100B52834 /* PalleteViewController.m in Sources */,
 				6EA7448D26A17C8300FAAEF1 /* AppDelegate.m in Sources */,
+				6E3DA93626A4794B00B52834 /* PalleteView.m in Sources */,
+				6E3DA94426A49C5200B52834 /* ColorButton.m in Sources */,
 				6EA744D626A1E5FC00FAAEF1 /* UIColor+AppColor.m in Sources */,
 				6EA744B326A17E7000FAAEF1 /* ArtistViewController.m in Sources */,
 				6EA744F126A2FD7500FAAEF1 /* ArtistView.m in Sources */,
 				6EA744FE26A3125E00FAAEF1 /* UIButton+AppButton.m in Sources */,
 				6EA7449E26A17C8600FAAEF1 /* main.m in Sources */,
 				6EA744E026A2F58200FAAEF1 /* CanvasView.m in Sources */,
+				6E3DA94826A49E1400B52834 /* BaseButton.m in Sources */,
 				6E3DA92A26A4728B00B52834 /* HalfPresentationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

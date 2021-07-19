@@ -11,6 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CanvasView : UIView
 
++(UIBezierPath*)DrawHead:(UIColor*)one two:(UIColor*)two three:(UIColor*)three;
++(void)DrawTree;
++(void)DrawLandscape;
++(void)DrawPlanet;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

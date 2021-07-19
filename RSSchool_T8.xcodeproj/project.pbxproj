@@ -13,6 +13,10 @@
 		6E3DA93626A4794B00B52834 /* PalleteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA93526A4794B00B52834 /* PalleteView.m */; };
 		6E3DA94426A49C5200B52834 /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA94326A49C5200B52834 /* ColorButton.m */; };
 		6E3DA94826A49E1400B52834 /* BaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA94726A49E1400B52834 /* BaseButton.m */; };
+		6E3DA94F26A5ABA500B52834 /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA94E26A5ABA500B52834 /* CanvasViewController.m */; };
+		6E3DA95426A5AF6200B52834 /* Head.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA95326A5AF6200B52834 /* Head.m */; };
+		6E3DA95B26A5C3C800B52834 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA95A26A5C3C800B52834 /* DrawingViewController.swift */; };
+		6E3DA95E26A5C46600B52834 /* Drawing.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3DA95D26A5C46600B52834 /* Drawing.xib */; };
 		6EA7448D26A17C8300FAAEF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */; };
 		6EA7449826A17C8600FAAEF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449726A17C8600FAAEF1 /* Assets.xcassets */; };
 		6EA7449B26A17C8600FAAEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449926A17C8600FAAEF1 /* LaunchScreen.storyboard */; };
@@ -39,6 +43,13 @@
 		6E3DA94326A49C5200B52834 /* ColorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorButton.m; sourceTree = "<group>"; };
 		6E3DA94626A49E1400B52834 /* BaseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseButton.h; sourceTree = "<group>"; };
 		6E3DA94726A49E1400B52834 /* BaseButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseButton.m; sourceTree = "<group>"; };
+		6E3DA94D26A5ABA500B52834 /* CanvasViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
+		6E3DA94E26A5ABA500B52834 /* CanvasViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
+		6E3DA95226A5AF6200B52834 /* Head.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Head.h; sourceTree = "<group>"; };
+		6E3DA95326A5AF6200B52834 /* Head.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Head.m; sourceTree = "<group>"; };
+		6E3DA95926A5C3C700B52834 /* RSSchool_T8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RSSchool_T8-Bridging-Header.h"; sourceTree = "<group>"; };
+		6E3DA95A26A5C3C800B52834 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		6E3DA95D26A5C46600B52834 /* Drawing.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Drawing.xib; sourceTree = "<group>"; };
 		6EA7448826A17C8300FAAEF1 /* RSSchool_T8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA7448B26A17C8300FAAEF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -176,6 +187,9 @@
 				6E3DA92C26A473D800B52834 /* Main */,
 				6E3DA92626A4550E00B52834 /* Pallete */,
 				6EA744F926A2FDB000FAAEF1 /* Canvas */,
+				6E3DA95A26A5C3C800B52834 /* DrawingViewController.swift */,
+				6E3DA95D26A5C46600B52834 /* Drawing.xib */,
+				6E3DA95926A5C3C700B52834 /* RSSchool_T8-Bridging-Header.h */,
 			);
 			path = Artist;
 			sourceTree = "<group>";
@@ -185,6 +199,10 @@
 			children = (
 				6EA744DE26A2F58200FAAEF1 /* CanvasView.h */,
 				6EA744DF26A2F58200FAAEF1 /* CanvasView.m */,
+				6E3DA95226A5AF6200B52834 /* Head.h */,
+				6E3DA95326A5AF6200B52834 /* Head.m */,
+				6E3DA94D26A5ABA500B52834 /* CanvasViewController.h */,
+				6E3DA94E26A5ABA500B52834 /* CanvasViewController.m */,
 			);
 			path = Canvas;
 			sourceTree = "<group>";
@@ -219,6 +237,7 @@
 				TargetAttributes = {
 					6EA7448726A17C8300FAAEF1 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -248,6 +267,7 @@
 				6EA7449B26A17C8600FAAEF1 /* LaunchScreen.storyboard in Resources */,
 				6E3DA91F26A4222C00B52834 /* Pallete.xib in Resources */,
 				6EA744B726A1808700FAAEF1 /* Artist.xib in Resources */,
+				6E3DA95E26A5C46600B52834 /* Drawing.xib in Resources */,
 				6EA744C126A1837400FAAEF1 /* Montserrat-Medium.ttf in Resources */,
 				6EA744C226A1837400FAAEF1 /* Montserrat-Regular.ttf in Resources */,
 				6EA7449826A17C8600FAAEF1 /* Assets.xcassets in Resources */,
@@ -262,8 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E3DA91826A41D1100B52834 /* PalleteViewController.m in Sources */,
+				6E3DA95426A5AF6200B52834 /* Head.m in Sources */,
 				6EA7448D26A17C8300FAAEF1 /* AppDelegate.m in Sources */,
 				6E3DA93626A4794B00B52834 /* PalleteView.m in Sources */,
+				6E3DA94F26A5ABA500B52834 /* CanvasViewController.m in Sources */,
 				6E3DA94426A49C5200B52834 /* ColorButton.m in Sources */,
 				6EA744D626A1E5FC00FAAEF1 /* UIColor+AppColor.m in Sources */,
 				6EA744B326A17E7000FAAEF1 /* ArtistViewController.m in Sources */,
@@ -273,6 +295,7 @@
 				6EA744E026A2F58200FAAEF1 /* CanvasView.m in Sources */,
 				6E3DA94826A49E1400B52834 /* BaseButton.m in Sources */,
 				6E3DA92A26A4728B00B52834 /* HalfPresentationController.m in Sources */,
+				6E3DA95B26A5C3C800B52834 /* DrawingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +430,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 97TSG2SA93;
 				INFOPLIST_FILE = RSSchool_T8/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -417,6 +442,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.artyomsog.RSSchool-T8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSchool_T8/Components/Artist/RSSchool_T8-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -426,7 +454,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 97TSG2SA93;
 				INFOPLIST_FILE = RSSchool_T8/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -436,6 +466,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.artyomsog.RSSchool-T8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSSchool_T8/Components/Artist/RSSchool_T8-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

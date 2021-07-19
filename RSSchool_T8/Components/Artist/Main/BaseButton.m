@@ -25,8 +25,10 @@
 - (void)setHighlighted:(BOOL)highlighted{
     if (highlighted) {
         [self.layer setShadowColor:[UIColor lightGreenSeaColor].CGColor];
+        [self.layer setShadowOpacity:1];
     } else {
         [self.layer setShadowColor:[UIColor blackColor].CGColor];
+        [self.layer setShadowOpacity:0.25];
     }
 }
 

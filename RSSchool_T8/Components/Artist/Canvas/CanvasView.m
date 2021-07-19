@@ -7,6 +7,7 @@
 
 #import "CanvasView.h"
 #import "UIColor+AppColor.h"
+#import "Head.h"
 
 @implementation CanvasView
 
@@ -20,6 +21,16 @@
     [[self layer] setShadowOpacity:0.25];
     [[self layer] setShadowColor:[UIColor chillSkyColor].CGColor];
     [[self layer] setShadowRadius:8];
+    
+    Head *head = [[Head alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    
+    [self addSubview:head];
+    [head startAnimation];
 }
 
++ (void)DrawHead:(UIColor *)one two:(UIColor *)two three:(UIColor *)three{
+}
++ (void)DrawTree{}
++ (void)DrawPlanet{}
++ (void)DrawLandscape{}
 @end

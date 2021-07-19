@@ -41,6 +41,8 @@
     
     [self.PaletteButton addTarget:self action:@selector(showPallete) forControlEvents:UIControlEventTouchUpInside];
     
+    [self.DrawButton addTarget:self action:@selector(drawImage) forControlEvents:UIControlEventTouchUpInside];
+    
     
     [self.ShareButton setEnabled:NO];
     
@@ -51,6 +53,9 @@
 }
 
 
+-(void)drawImage{
+    
+}
 
 
 -(void)showPallete{

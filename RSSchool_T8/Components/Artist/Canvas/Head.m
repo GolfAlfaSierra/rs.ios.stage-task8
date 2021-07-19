@@ -174,22 +174,4 @@
     [Head strokeThree:nil];
 }
 
-
-
-
-- (void)startAnimation
-{
-    if (self.displayLink == nil) {
-        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(tick)];
-        
-        [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop]
-                               forMode:NSDefaultRunLoopMode];
-    }
-}
-
-- (void)tick
-{
-    
-}
-
 @end

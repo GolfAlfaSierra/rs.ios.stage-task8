@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL isChecked;
 -(UIColor*)getColor;
+-(void)setUnChecked;
 
 @end
 

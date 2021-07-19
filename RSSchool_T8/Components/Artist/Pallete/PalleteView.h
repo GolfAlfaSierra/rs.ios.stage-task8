@@ -11,8 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PalleteView : UIView
 
-@property (nonatomic, strong) NSArray<UIColor *> *selectedColors;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -57,7 +57,7 @@
         
     }
     
-//    [NSNotificationCenter.defaultCenter postNotificationName:@"app-Color" object:self userInfo:nil];
+    [NSNotificationCenter.defaultCenter postNotificationName:@"app-Color" object:self userInfo:nil];
     
 }
 
@@ -67,7 +67,7 @@
     self.subviews.firstObject.center = CGPointMake(self.frame.size.width  / 2,
                                                    self.frame.size.height / 2);
     
-    self.isChecked = !self.isChecked;
+    self.isChecked = NO;
     
 }
 -(void)setChecked{
@@ -75,7 +75,7 @@
     self.subviews.firstObject.center = CGPointMake(self.frame.size.width  / 2,
                                                    self.frame.size.height / 2);
     
-    self.isChecked = !self.isChecked;
+    self.isChecked = YES;
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(resetBackground) userInfo:nil repeats:NO];
     

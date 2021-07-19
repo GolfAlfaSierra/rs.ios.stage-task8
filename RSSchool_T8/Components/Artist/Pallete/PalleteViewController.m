@@ -7,15 +7,18 @@
 
 #import "PalleteViewController.h"
 #import "HalfPresentationController.h"
+#import "ColorButton.h"
 
 
-
-
-
-@interface PalleteViewController () 
+@interface PalleteViewController ()
+{
+    NSMutableArray *selectedColors;
+}
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (weak, nonatomic) IBOutlet UIView *rowOne;
 @property (weak, nonatomic) IBOutlet UIView *rowTwo;
+
+//@property (strong, nonatomic) NSMutableArray *selectedColors;
 
 
 
@@ -28,6 +31,32 @@
     
     [self setupColors];
     
+    if (selectedColors == nil) {
+        selectedColors = [NSMutableArray array];
+    }
+    
+    
+    
+    
+    [NSNotificationCenter.defaultCenter addObserverForName:@"app-Color" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
+        NSLog(@"%@", [note object]);
+        
+        ColorButton *button = [note object];
+        UIColor *color = [button getColor];
+        BOOL checked = [button isChecked];
+        
+        if (checked) {
+            [self addColor:button];
+        } else {
+            [self removeColor:color];
+            [button setUnChecked];
+        }
+        
+        
+//        NSLog(@"%@", [button getColor]);
+        
+//        [button isChecked];
+    }];
     
     
 //    [self.view setBackgroundColor:UIColor.redColor];
@@ -36,6 +65,18 @@
     
 }
 
+
+-(void)addColor:(ColorButton*)colorButton{
+    [selectedColors addObject:colorButton];
+    if (selectedColors.count > 3) {
+        [selectedColors.firstObject setUnChecked];
+        [selectedColors removeObjectAtIndex:0];
+    }
+}
+
+-(void)removeColor:(UIColor*)color{
+    [selectedColors removeObject:color];
+}
 
 -(void)setupColors{
     NSArray<UIColor*> *colors = @[

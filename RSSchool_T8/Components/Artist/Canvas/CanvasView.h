@@ -10,7 +10,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CanvasView : UIView
-
+@property (strong, nonatomic) CAShapeLayer* strokeLayer1;
+@property (strong, nonatomic) CAShapeLayer* strokeLayer2;
+@property (strong, nonatomic) CAShapeLayer* strokeLayer3;
+- (void)drawHeadWithColors:(NSArray<UIColor*>*)colors;
 
 @end
 

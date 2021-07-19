@@ -14,10 +14,9 @@
 
 @class DrawingViewController;
 @interface ArtistViewController ()
+
 {
-    NSArray *chosenColors;
-    CGFloat *timer;
-    
+    NSArray *selectedColors;
 }
 @property (weak, nonatomic) IBOutlet CanvasView *canvas;
 @property (weak, nonatomic) IBOutlet UIButton *ShareButton;
@@ -35,8 +34,16 @@
     [super viewDidLoad];
     [self setupNavigation];
     
+    selectedColors = @[UIColor.blackColor, UIColor.blackColor, UIColor.blackColor];
     
-    //    [self.canvas drawRect:CGRectMake(0, 0, 300, 300)];
+    [NSNotificationCenter.defaultCenter addObserverForName:@"app-colors-saved" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
+        NSLog(@"%@",note);
+        
+        self->selectedColors = [note object];
+    }];
+    
+    self.timerValue = 1;
+    
     
     
     [self.PaletteButton addTarget:self action:@selector(showPallete) forControlEvents:UIControlEventTouchUpInside];
@@ -50,11 +57,33 @@
     
     
     
-    // Do any additional setup after loading the view.
+    
 }
 
 
+- (void)setLayersStrokeEndTo:(float)strokeEnd {
+    _canvas.strokeLayer1.strokeEnd = strokeEnd;
+    _canvas.strokeLayer2.strokeEnd = strokeEnd;
+    _canvas.strokeLayer3.strokeEnd = strokeEnd;
+}
+
+
+
 -(void)drawImage{
+    
+    
+    [_canvas drawHeadWithColors:selectedColors];
+    [_redrawTimer invalidate];
+    [self setLayersStrokeEndTo:0];
+    __block float stroke = 0;
+    _redrawTimer = [NSTimer scheduledTimerWithTimeInterval:0.01667 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        stroke += (0.01667 / self->_timerValue);
+        [self setLayersStrokeEndTo:stroke];
+        if (stroke >= 1)  {
+            [timer invalidate];
+        }
+    }];
+    
     
 }
 

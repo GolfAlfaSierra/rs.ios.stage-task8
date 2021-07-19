@@ -106,10 +106,10 @@
 		6E3DA92C26A473D800B52834 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				6EA744B126A17E7000FAAEF1 /* ArtistViewController.h */,
 				6EA744B626A1808700FAAEF1 /* Artist.xib */,
 				6EA744EF26A2FD7500FAAEF1 /* ArtistView.h */,
 				6EA744F026A2FD7500FAAEF1 /* ArtistView.m */,
+				6EA744B126A17E7000FAAEF1 /* ArtistViewController.h */,
 				6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */,
 				6E3DA94626A49E1400B52834 /* BaseButton.h */,
 				6E3DA94726A49E1400B52834 /* BaseButton.m */,
@@ -136,10 +136,10 @@
 		6EA7448A26A17C8300FAAEF1 /* RSSchool_T8 */ = {
 			isa = PBXGroup;
 			children = (
-				6EA744CF26A1A71300FAAEF1 /* Components */,
 				6EA744C426A189FE00FAAEF1 /* Application */,
-				6EA744B926A182EF00FAAEF1 /* Fonts */,
 				6EA744D826A1E6B600FAAEF1 /* Categories */,
+				6EA744CF26A1A71300FAAEF1 /* Components */,
+				6EA744B926A182EF00FAAEF1 /* Fonts */,
 			);
 			path = RSSchool_T8;
 			sourceTree = "<group>";

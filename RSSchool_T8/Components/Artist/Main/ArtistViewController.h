@@ -10,7 +10,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ArtistViewController : UIViewController
-
+@property (nonatomic, strong) NSArray *slectedColors;
+@property                  float timerValue;
+@property(nonatomic, copy) NSString *drawing;
+@property(nonatomic, copy) NSTimer  *redrawTimer;
 @end
 
 NS_ASSUME_NONNULL_END

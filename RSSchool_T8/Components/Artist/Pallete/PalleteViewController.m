@@ -109,7 +109,7 @@
 }
 -(void)setupButton{
     
-    
+    [NSNotificationCenter.defaultCenter postNotificationName:@"app-colors-saved" object:selectedColors];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

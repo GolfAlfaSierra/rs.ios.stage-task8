@@ -10,7 +10,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Head : UIView
--(void)startAnimation;
++(UIBezierPath*)getHeadChinVector;
++(UIBezierPath*)getLipsHeadVector;
++(UIBezierPath*)getHeadNeckVector;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

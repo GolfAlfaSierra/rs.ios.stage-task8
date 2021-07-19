@@ -8,170 +8,135 @@
 #import "Head.h"
 
 @interface Head ()
-@property (strong, nonatomic) CADisplayLink *displayLink;
-@property (nonatomic) CGFloat from;
-@property (nonatomic) CGFloat to;
-@property (nonatomic) BOOL animating;
+
 @end
 
 @implementation Head
-+(void)strokeOneWithColor:(UIColor*)color{
-    //// Color Declarations
-    UIColor* strokeColor = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 1];
-    if (color != nil) {
-        strokeColor = color;
-    }
-    
-    
-    UIBezierPath* bezierPath = [UIBezierPath bezierPath];
-    [bezierPath moveToPoint: CGPointMake(54.5, 20)];
-    [bezierPath addLineToPoint: CGPointMake(70, 80)];
-    [bezierPath addLineToPoint: CGPointMake(82, 103)];
-    [bezierPath addLineToPoint: CGPointMake(99.5, 122.5)];
-    [bezierPath addLineToPoint: CGPointMake(126.5, 145)];
-    [bezierPath addLineToPoint: CGPointMake(150, 150.5)];
-    [bezierPath addLineToPoint: CGPointMake(186, 133)];
-    [bezierPath addLineToPoint: CGPointMake(213, 103)];
-    [bezierPath addLineToPoint: CGPointMake(221.5, 91)];
-    [bezierPath addLineToPoint: CGPointMake(221.5, 68.5)];
-    [bezierPath addLineToPoint: CGPointMake(223.5, 41.5)];
-    [bezierPath addLineToPoint: CGPointMake(211.5, 31.5)];
-    [bezierPath addLineToPoint: CGPointMake(195, 34.5)];
-    [bezierPath addLineToPoint: CGPointMake(184, 51.5)];
-    [bezierPath addLineToPoint: CGPointMake(182, 74.5)];
-    [bezierPath addLineToPoint: CGPointMake(186, 87)];
-    [strokeColor setStroke];
-    bezierPath.lineWidth = 1;
-    bezierPath.miterLimit = 4;
-    bezierPath.lineCapStyle = kCGLineCapRound;
-    [bezierPath stroke];
-}
-+(void)strokeTwo:(UIColor*)color{
-    //// Color Declarations
-    UIColor* strokeColor = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 1];
-    if (color != nil) {
-        strokeColor = color;
-    }
-    
-    UIBezierPath* bezier2Path = [UIBezierPath bezierPath];
-    [bezier2Path moveToPoint: CGPointMake(177, 91)];
-    [bezier2Path addLineToPoint: CGPointMake(168.5, 89.5)];
-    [bezier2Path addLineToPoint: CGPointMake(159, 91.5)];
-    [bezier2Path addLineToPoint: CGPointMake(151, 92.5)];
-    [bezier2Path addLineToPoint: CGPointMake(141.5, 91.5)];
-    [bezier2Path addLineToPoint: CGPointMake(133, 90)];
-    [bezier2Path addLineToPoint: CGPointMake(126.5, 89.5)];
-    [bezier2Path addLineToPoint: CGPointMake(119, 91)];
-    [bezier2Path addLineToPoint: CGPointMake(114.5, 93)];
-    [bezier2Path addLineToPoint: CGPointMake(120.5, 95.5)];
-    [bezier2Path addLineToPoint: CGPointMake(125, 99)];
-    [bezier2Path addLineToPoint: CGPointMake(129.5, 104)];
-    [bezier2Path addLineToPoint: CGPointMake(135.5, 106.5)];
-    [bezier2Path addLineToPoint: CGPointMake(143, 107.5)];
-    [bezier2Path addLineToPoint: CGPointMake(150, 106.5)];
-    [bezier2Path addLineToPoint: CGPointMake(157.5, 107.5)];
-    [bezier2Path addLineToPoint: CGPointMake(163.5, 106.5)];
-    [bezier2Path addLineToPoint: CGPointMake(170, 102.5)];
-    [bezier2Path addLineToPoint: CGPointMake(177, 94.5)];
-    [bezier2Path addLineToPoint: CGPointMake(181.5, 88.5)];
-    [bezier2Path addLineToPoint: CGPointMake(173.5, 87.5)];
-    [bezier2Path addLineToPoint: CGPointMake(164.5, 86.5)];
-    [bezier2Path addLineToPoint: CGPointMake(155.5, 84.5)];
-    [bezier2Path addLineToPoint: CGPointMake(147, 84)];
-    [bezier2Path addLineToPoint: CGPointMake(137, 85.5)];
-    [bezier2Path addLineToPoint: CGPointMake(128, 87.5)];
-    [bezier2Path addLineToPoint: CGPointMake(118, 88.5)];
-    [bezier2Path addLineToPoint: CGPointMake(111, 88)];
-    [bezier2Path addLineToPoint: CGPointMake(120.5, 82)];
-    [bezier2Path addLineToPoint: CGPointMake(129.5, 75.5)];
-    [bezier2Path addLineToPoint: CGPointMake(135.5, 72)];
-    [bezier2Path addLineToPoint: CGPointMake(140.5, 73.5)];
-    [bezier2Path addLineToPoint: CGPointMake(146, 75.5)];
-    [bezier2Path addLineToPoint: CGPointMake(152.5, 74.5)];
-    [bezier2Path addLineToPoint: CGPointMake(159, 73.5)];
-    [bezier2Path addLineToPoint: CGPointMake(164.5, 73.5)];
-    [bezier2Path addLineToPoint: CGPointMake(167.5, 75.5)];
-    [bezier2Path addLineToPoint: CGPointMake(172.5, 80.5)];
-    [bezier2Path addLineToPoint: CGPointMake(180, 85)];
-    [strokeColor setStroke];
-    bezier2Path.lineWidth = 1;
-    bezier2Path.miterLimit = 4;
-    bezier2Path.lineCapStyle = kCGLineCapRound;
-    [bezier2Path stroke];
-}
-+(void)strokeThree:(UIColor*)color{
-    //// Color Declarations
-    UIColor* strokeColor = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 1];
-    if (color != nil) {
-        strokeColor = color;
-    }
-    
-    
-    UIBezierPath* bezier3Path = [UIBezierPath bezierPath];
-    [bezier3Path moveToPoint: CGPointMake(182.5, 93.5)];
-    [bezier3Path addLineToPoint: CGPointMake(187, 99.5)];
-    [bezier3Path addLineToPoint: CGPointMake(189.5, 106)];
-    [bezier3Path addLineToPoint: CGPointMake(186, 115)];
-    [bezier3Path addLineToPoint: CGPointMake(179, 123.5)];
-    [bezier3Path addLineToPoint: CGPointMake(170, 130.5)];
-    [bezier3Path addLineToPoint: CGPointMake(160.5, 123.5)];
-    [bezier3Path addLineToPoint: CGPointMake(150, 119.5)];
-    [bezier3Path addLineToPoint: CGPointMake(140.5, 119.5)];
-    [bezier3Path addLineToPoint: CGPointMake(128.5, 123.5)];
-    [bezier3Path addLineToPoint: CGPointMake(120.5, 133)];
-    [bezier3Path addLineToPoint: CGPointMake(114, 145.5)];
-    [bezier3Path addLineToPoint: CGPointMake(102.5, 138.5)];
-    [bezier3Path addLineToPoint: CGPointMake(94.5, 128.5)];
-    [bezier3Path addLineToPoint: CGPointMake(86, 119.5)];
-    [bezier3Path addLineToPoint: CGPointMake(86, 133)];
-    [bezier3Path addLineToPoint: CGPointMake(86, 161.5)];
-    [bezier3Path addLineToPoint: CGPointMake(86, 178.5)];
-    [bezier3Path addLineToPoint: CGPointMake(79, 190)];
-    [bezier3Path addLineToPoint: CGPointMake(67.5, 198.5)];
-    [bezier3Path addLineToPoint: CGPointMake(56.5, 205.5)];
-    [bezier3Path addLineToPoint: CGPointMake(74, 212)];
-    [bezier3Path addLineToPoint: CGPointMake(87.5, 220.5)];
-    [bezier3Path addLineToPoint: CGPointMake(98, 234.5)];
-    [bezier3Path addLineToPoint: CGPointMake(112, 252)];
-    [bezier3Path addLineToPoint: CGPointMake(131, 270)];
-    [bezier3Path addLineToPoint: CGPointMake(150, 276.5)];
-    [bezier3Path addLineToPoint: CGPointMake(164, 276.5)];
-    [bezier3Path addLineToPoint: CGPointMake(179, 268.5)];
-    [bezier3Path addLineToPoint: CGPointMake(192.5, 252)];
-    [bezier3Path addLineToPoint: CGPointMake(202.5, 230.5)];
-    [bezier3Path addLineToPoint: CGPointMake(212, 214.5)];
-    [bezier3Path addLineToPoint: CGPointMake(226.5, 208)];
-    [bezier3Path addLineToPoint: CGPointMake(230, 208)];
-    [bezier3Path addLineToPoint: CGPointMake(223.5, 192.5)];
-    [bezier3Path addLineToPoint: CGPointMake(214, 164)];
-    [bezier3Path addLineToPoint: CGPointMake(212, 141)];
-    [bezier3Path addLineToPoint: CGPointMake(212, 117.5)];
-    [bezier3Path addLineToPoint: CGPointMake(205, 128.5)];
-    [bezier3Path addLineToPoint: CGPointMake(197, 136.5)];
-    [bezier3Path addLineToPoint: CGPointMake(189.5, 145.5)];
-    [bezier3Path addLineToPoint: CGPointMake(173, 161.5)];
-    [bezier3Path addLineToPoint: CGPointMake(163, 176)];
-    [bezier3Path addLineToPoint: CGPointMake(154.5, 197.5)];
-    [bezier3Path addLineToPoint: CGPointMake(151.5, 223.5)];
-    [bezier3Path addLineToPoint: CGPointMake(151.5, 252)];
-    [bezier3Path addLineToPoint: CGPointMake(151.5, 270)];
-    [strokeColor setStroke];
-    bezier3Path.lineWidth = 1;
-    bezier3Path.miterLimit = 4;
-    bezier3Path.lineCapStyle = kCGLineCapRound;
-    [bezier3Path stroke];
 
+
+
+//MARK: - Paths
++ (UIBezierPath *)getHeadChinVector {
+    UIBezierPath *shape = [[UIBezierPath alloc] init];
+    [shape moveToPoint:CGPointMake(0.5, 1)];
+    [shape addLineToPoint:CGPointMake(16, 61)];
+    [shape addLineToPoint:CGPointMake(28, 84)];
+    [shape addLineToPoint:CGPointMake(45.5, 103.5)];
+    [shape addLineToPoint:CGPointMake(72.5, 126)];
+    [shape addLineToPoint:CGPointMake(96, 131.5)];
+    [shape addLineToPoint:CGPointMake(132, 114)];
+    [shape addLineToPoint:CGPointMake(159, 84)];
+    [shape addLineToPoint:CGPointMake(167.5, 72)];
+    [shape addLineToPoint:CGPointMake(167.5, 49.5)];
+    [shape addLineToPoint:CGPointMake(169.5, 22.5)];
+    [shape addLineToPoint:CGPointMake(157.5, 12.5)];
+    [shape addLineToPoint:CGPointMake(141, 15.5)];
+    [shape addLineToPoint:CGPointMake(130, 32.5)];
+    [shape addLineToPoint:CGPointMake(128, 55.5)];
+    [shape addLineToPoint:CGPointMake(132, 68)];
+    shape.miterLimit = 4;
+    shape.lineCapStyle = kCGLineCapRound;
+    return shape;
 }
 
-- (void)drawRect:(CGRect)rect{
-    
-    
-    [[UIColor whiteColor] setFill];
-    UIRectFill(rect);
-    
-    [Head strokeOneWithColor:nil];
-    [Head strokeTwo:nil];
-    [Head strokeThree:nil];
++ (UIBezierPath *)getLipsHeadVector {
+    UIBezierPath *shape = [[UIBezierPath alloc] init];
+    [shape moveToPoint:CGPointMake(68, 20)];
+    [shape addLineToPoint: CGPointMake(59.5, 18.5)];
+    [shape addLineToPoint: CGPointMake(50, 20.5)];
+    [shape addLineToPoint: CGPointMake(42, 21.5)];
+    [shape addLineToPoint: CGPointMake(32.5, 20.5)];
+    [shape addLineToPoint: CGPointMake(24, 19)];
+    [shape addLineToPoint: CGPointMake(17.5, 18.5)];
+    [shape addLineToPoint: CGPointMake(10, 20)];
+    [shape addLineToPoint: CGPointMake(5.5, 22)];
+    [shape addLineToPoint: CGPointMake(11.5, 24.5)];
+    [shape addLineToPoint: CGPointMake(16, 28)];
+    [shape addLineToPoint: CGPointMake(20.5, 33)];
+    [shape addLineToPoint: CGPointMake(26.5, 35.5)];
+    [shape addLineToPoint: CGPointMake(34, 36.5)];
+    [shape addLineToPoint: CGPointMake(41, 35.5)];
+    [shape addLineToPoint: CGPointMake(48.5, 36.5)];
+    [shape addLineToPoint: CGPointMake(54.5, 35.5)];
+    [shape addLineToPoint: CGPointMake(61, 31.5)];
+    [shape addLineToPoint: CGPointMake(68, 23.5)];
+    [shape addLineToPoint: CGPointMake(72.5, 17.5)];
+    [shape addLineToPoint: CGPointMake(64.5, 16.5)];
+    [shape addLineToPoint: CGPointMake(55.5, 15.5)];
+    [shape addLineToPoint: CGPointMake(46.5, 13.5)];
+    [shape addLineToPoint: CGPointMake(38, 13)];
+    [shape addLineToPoint: CGPointMake(28, 14.5)];
+    [shape addLineToPoint: CGPointMake(19, 16.5)];
+    [shape addLineToPoint: CGPointMake(9, 17.5)];
+    [shape addLineToPoint: CGPointMake(2, 17)];
+    [shape addLineToPoint: CGPointMake(11.5, 11)];
+    [shape addLineToPoint: CGPointMake(20.5, 4.5)];
+    [shape addLineToPoint: CGPointMake(26.5, 1)];
+    [shape addLineToPoint: CGPointMake(31.5, 2.5)];
+    [shape addLineToPoint: CGPointMake(37, 4.5)];
+    [shape addLineToPoint: CGPointMake(43.5, 3.5)];
+    [shape addLineToPoint: CGPointMake(50, 2.5)];
+    [shape addLineToPoint: CGPointMake(55.5, 2.5)];
+    [shape addLineToPoint: CGPointMake(58.5, 4.5)];
+    [shape addLineToPoint: CGPointMake(63.5, 9.5)];
+    [shape addLineToPoint: CGPointMake(71, 14)];
+    shape.miterLimit = 4;
+    shape.lineCapStyle = kCGLineCapRound;
+    return shape;
+}
+
++ (UIBezierPath *)getHeadNeckVector {
+    UIBezierPath *shape = [[UIBezierPath alloc] init];
+    [shape moveToPoint:CGPointMake(127.5, 0.5)];
+    [shape addLineToPoint: CGPointMake(132, 6.5)];
+    [shape addLineToPoint: CGPointMake(134.5, 13)];
+    [shape addLineToPoint: CGPointMake(131, 22)];
+    [shape addLineToPoint: CGPointMake(124, 30.5)];
+    [shape addLineToPoint: CGPointMake(115, 37.5)];
+    [shape addLineToPoint: CGPointMake(105.5, 30.5)];
+    [shape addLineToPoint: CGPointMake(95, 26.5)];
+    [shape addLineToPoint: CGPointMake(85.5, 26.5)];
+    [shape addLineToPoint: CGPointMake(73.5, 30.5)];
+    [shape addLineToPoint: CGPointMake(65.5, 40)];
+    [shape addLineToPoint: CGPointMake(59, 52.5)];
+    [shape addLineToPoint: CGPointMake(47.5, 45.5)];
+    [shape addLineToPoint: CGPointMake(39.5, 35.5)];
+    [shape addLineToPoint: CGPointMake(31, 26.5)];
+    [shape addLineToPoint: CGPointMake(31, 40)];
+    [shape addLineToPoint: CGPointMake(31, 68.5)];
+    [shape addLineToPoint: CGPointMake(31, 85.5)];
+    [shape addLineToPoint: CGPointMake(24, 97)];
+    [shape addLineToPoint: CGPointMake(12.5, 105.5)];
+    [shape addLineToPoint: CGPointMake(1.5, 112.5)];
+    [shape addLineToPoint: CGPointMake(19, 119)];
+    [shape addLineToPoint: CGPointMake(32.5, 127.5)];
+    [shape addLineToPoint: CGPointMake(43, 141.5)];
+    [shape addLineToPoint: CGPointMake(57, 159)];
+    [shape addLineToPoint: CGPointMake(76, 177)];
+    [shape addLineToPoint: CGPointMake(95, 183.5)];
+    [shape addLineToPoint: CGPointMake(109, 183.5)];
+    [shape addLineToPoint: CGPointMake(124, 175.5)];
+    [shape addLineToPoint: CGPointMake(137.5, 159)];
+    [shape addLineToPoint: CGPointMake(147.5, 137.5)];
+    [shape addLineToPoint: CGPointMake(157, 121.5)];
+    [shape addLineToPoint: CGPointMake(171.5, 115)];
+    [shape addLineToPoint: CGPointMake(175, 115.5)];
+    [shape addLineToPoint: CGPointMake(168.5, 99.5)];
+    [shape addLineToPoint: CGPointMake(159, 71)];
+    [shape addLineToPoint: CGPointMake(157, 48)];
+    [shape addLineToPoint: CGPointMake(157, 24.5)];
+    [shape addLineToPoint: CGPointMake(150, 35.5)];
+    [shape addLineToPoint: CGPointMake(142, 43.5)];
+    [shape addLineToPoint: CGPointMake(134.5, 52.5)];
+    [shape addLineToPoint: CGPointMake(118, 68.5)];
+    [shape addLineToPoint: CGPointMake(108, 83)];
+    [shape addLineToPoint: CGPointMake(99.5, 104.5)];
+    [shape addLineToPoint: CGPointMake(96.5, 130.5)];
+    [shape addLineToPoint: CGPointMake(96.5, 159)];
+    [shape addLineToPoint: CGPointMake(96.5, 177)];
+    shape.miterLimit = 4;
+    shape.lineCapStyle = kCGLineCapRound;
+    return shape;
 }
 
 @end

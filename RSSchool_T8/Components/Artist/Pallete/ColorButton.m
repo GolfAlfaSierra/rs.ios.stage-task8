@@ -8,9 +8,7 @@
 #import "ColorButton.h"
 
 @interface ColorButton ()
-
-
-
+@property (nonatomic, strong) NSTimer *timer;
 @end
 
 @implementation ColorButton
@@ -34,26 +32,60 @@
     
     
     [sub.layer setCornerRadius:6];
-//    [sub setBackgroundColor:UIColor.blueColor];
     [self addSubview:sub];
     
     [sub setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     sub.center = CGPointMake(self.frame.size.width  / 2,
-                                     self.frame.size.height / 2);
-
+                             self.frame.size.height / 2);
+    
+    self.isChecked = NO;
+    
 }
 
-- (void)pressesEnded:(NSSet<UIPress *> *)presses withEvent:(UIPressesEvent *)event{
-    
+-(UIColor*)getColor{
+    return self.subviews.firstObject.backgroundColor;
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
+    if (!self.isChecked) {
+        [self setChecked];
+        
+    } else {
+        [self setUnChecked];
+        
+    }
+    
+//    [NSNotificationCenter.defaultCenter postNotificationName:@"app-Color" object:self userInfo:nil];
+    
 }
 
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+-(void)setUnChecked{
     
+    [self.subviews.firstObject setFrame:CGRectMake(0,0 , 24, 24)];
+    self.subviews.firstObject.center = CGPointMake(self.frame.size.width  / 2,
+                                                   self.frame.size.height / 2);
+    
+    self.isChecked = !self.isChecked;
+    
+}
+-(void)setChecked{
+    [self.subviews.firstObject setFrame:CGRectMake(0, 0 , 36, 36)];
+    self.subviews.firstObject.center = CGPointMake(self.frame.size.width  / 2,
+                                                   self.frame.size.height / 2);
+    
+    self.isChecked = !self.isChecked;
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(resetBackground) userInfo:nil repeats:NO];
+    
+    
+    [self.superview.superview setBackgroundColor:[self getColor]];
+}
+
+
+-(void)resetBackground{
+    [self.superview.superview setBackgroundColor:[UIColor whiteColor]];
 }
 
 @end

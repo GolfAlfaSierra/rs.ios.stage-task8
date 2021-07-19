@@ -87,7 +87,6 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="lLz-TM-Iw9" firstAttribute="top" secondItem="yyk-wc-K1D" secondAttribute="top" id="1q8-v1-8FZ"/>
                         <constraint firstItem="EhO-iC-nMi" firstAttribute="leading" secondItem="0JJ-kP-c3F" secondAttribute="trailing" constant="20" id="69h-fK-YVg"/>
@@ -164,7 +163,6 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="3Cz-T2-nC9"/>
                         <constraint firstAttribute="bottom" secondItem="DOD-In-ulv" secondAttribute="bottom" id="85o-Ia-PqN"/>

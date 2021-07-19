@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ColorButton : UIButton
 
 @property (nonatomic, assign) BOOL isChecked;
+-(UIColor*)getColor;
 
 @end
 

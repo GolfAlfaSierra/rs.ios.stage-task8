@@ -45,6 +45,7 @@
     
     
     [self.ShareButton setEnabled:NO];
+    [self.TimerButton addTarget:self action:@selector(showTimer) forControlEvents:UIControlEventTouchUpInside];
     
     
     
@@ -55,6 +56,17 @@
 
 -(void)drawImage{
     
+}
+
+-(void)showTimer{
+    TimerViewController *vc = [[TimerViewController alloc] initWithNibName:@"Timer" bundle:nil];
+    
+    vc.modalPresentationStyle = UIModalPresentationCustom;
+    
+    vc.transitioningDelegate = vc;
+    
+    [self presentViewController:vc animated:YES completion:nil];
+
 }
 
 

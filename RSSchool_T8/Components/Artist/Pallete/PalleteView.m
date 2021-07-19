@@ -18,11 +18,6 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     [self setup];
-    
-    
-    
-    
-    [self setupColors];
 }
 
 -(void)setup{
@@ -36,9 +31,5 @@
     
     
 }
-
--(void)setupColors{
-}
-
 
 @end

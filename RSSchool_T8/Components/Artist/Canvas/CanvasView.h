@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) CAShapeLayer* strokeLayer2;
 @property (strong, nonatomic) CAShapeLayer* strokeLayer3;
 - (void)drawHeadWithColors:(NSArray<UIColor*>*)colors;
+- (void)drawTreeWithColors:(NSArray<UIColor*>*)colors;
+- (void)drawPlanetWithColors:(NSArray<UIColor*>*)colors;
+- (void)drawLandscapeWithColors:(NSArray<UIColor*>*)colors;
 
 @end
 

@@ -4,3 +4,5 @@
 
 #import "UIColor+AppColor.h"
 #import "HalfPresentationController.h"
+
+#import "ArtistViewController.h"

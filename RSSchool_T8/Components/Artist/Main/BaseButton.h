@@ -10,7 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseButton : UIButton
-
+-(void)setEnabledState;
+-(void)setDisabledState;
 @end
 
 NS_ASSUME_NONNULL_END

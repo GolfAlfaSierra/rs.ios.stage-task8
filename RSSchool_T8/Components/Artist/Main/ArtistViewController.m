@@ -7,22 +7,24 @@
 
 #import "ArtistViewController.h"
 #import "UIColor+AppColor.h"
+#import "NSMutableArray+Shuffle.h"
 #import "CanvasView.h"
 #import "PalleteViewController.h"
 #import "RSSchool_T8-Swift.h"
+#import "BaseButton.h"
 
 
 @class DrawingViewController;
 @interface ArtistViewController ()
 
 {
-    NSArray *selectedColors;
+    NSMutableArray *selectedColors;
 }
 @property (weak, nonatomic) IBOutlet CanvasView *canvas;
-@property (weak, nonatomic) IBOutlet UIButton *ShareButton;
-@property (weak, nonatomic) IBOutlet UIButton *TimerButton;
-@property (weak, nonatomic) IBOutlet UIButton *PaletteButton;
-@property (weak, nonatomic) IBOutlet UIButton *DrawButton;
+@property (weak, nonatomic) IBOutlet BaseButton *ShareButton;
+@property (weak, nonatomic) IBOutlet BaseButton *TimerButton;
+@property (weak, nonatomic) IBOutlet BaseButton *PaletteButton;
+@property (weak, nonatomic) IBOutlet BaseButton *DrawButton;
 
 
 
@@ -34,7 +36,8 @@
     [super viewDidLoad];
     [self setupNavigation];
     
-    selectedColors = @[UIColor.blackColor, UIColor.blackColor, UIColor.blackColor];
+    selectedColors = [NSMutableArray arrayWithArray:@[UIColor.blackColor, UIColor.blackColor, UIColor.blackColor]];
+    
     self.timerValue = 1;
     self.drawing = DrawingHead;
     
@@ -50,7 +53,22 @@
     [NSNotificationCenter.defaultCenter addObserverForName:@"app-drawing-saved" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
         NSLog(@"%@",note);
         
-        self->_drawing = DrawingHead ;// TODO
+        NSString *drawi = (NSString*)[note object];
+        
+        if ([drawi isEqualToString:@"Head"]) {
+            self->_drawing = DrawingHead;
+        }
+        if ([drawi isEqualToString:@"Planet"]) {
+            self->_drawing = DrawingPlanet;
+        }
+        if ([drawi isEqualToString:@"Landscape"]) {
+            self->_drawing = DrawingLandscape;
+        }
+        if ([drawi isEqualToString:@"Tree"]) {
+            self->_drawing = DrawingTree;
+        }
+        
+//        self->_drawing =  ;// TODO
     }];
     
     [NSNotificationCenter.defaultCenter addObserverForName:@"app-color-saved" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
@@ -90,9 +108,52 @@
 
 
 -(void)drawImage{
+    if ([self.DrawButton.titleLabel.text isEqualToString:@"Reset"]) {
+        
+        
+        
+        [self.DrawButton setEnabledState];
+        [self.ShareButton setDisabledState];
+        [self.PaletteButton setEnabledState];
+        [self.TimerButton setEnabledState];
+        
+        [self setLayersStrokeEndTo:0];
+        
+        
+        return;
+    }
     
     
-    [_canvas drawHeadWithColors:selectedColors];
+    [self.DrawButton setDisabledState];
+    [self.ShareButton setDisabledState];
+    [self.PaletteButton setDisabledState];
+    [self.TimerButton setDisabledState];
+    
+    
+    
+    
+    
+    
+    [selectedColors shuffle];
+    switch (_drawing) {
+            
+        case DrawingTree:
+            [_canvas drawTreeWithColors:selectedColors];
+            break;
+        case DrawingLandscape:
+            [_canvas drawLandscapeWithColors:selectedColors];
+            break;
+        case DrawingPlanet:
+            [_canvas drawPlanetWithColors:selectedColors];
+            break;
+        case DrawingHead:
+            [_canvas drawHeadWithColors:selectedColors];
+            break;
+        default:
+            break;
+    }
+    
+    
     [_redrawTimer invalidate];
     [self setLayersStrokeEndTo:0];
     __block float stroke = 0;
@@ -101,6 +162,12 @@
         [self setLayersStrokeEndTo:stroke];
         if (stroke >= 1)  {
             [timer invalidate];
+            
+            
+            [self.DrawButton setEnabledState];
+            [self.ShareButton setEnabledState];
+            self.DrawButton.titleLabel.text = @"Reset";
+            
         }
     }];
     

@@ -42,14 +42,30 @@
     }
 }
 
-- (void)setSelected:(BOOL)selected{
-    if (selected) {
-        [self.layer setShadowColor:[UIColor lightGreenSeaColor].CGColor];
-        [self.layer setShadowOpacity:1];
-    } else {
-        [self.layer setShadowColor:[UIColor blackColor].CGColor];
-        [self.layer setShadowOpacity:0.25];
-    }
+-(void)setEnabledState{
+    self.layer.shadowRadius   = 4.0;
+    self.layer.shadowColor    = [[UIColor blackColor] CGColor];
+    self.layer.shadowOpacity  = 0.25;
+    self.alpha                = 1;
+    self.titleLabel.textColor = [UIColor lightGreenSeaColor];
+    [self setEnabled:YES];
 }
+-(void)setDisabledState{
+    self.layer.shadowRadius   = 2.0;
+    self.layer.shadowColor    = [[UIColor blackColor] CGColor];
+    self.layer.shadowOpacity  = .25;
+    self.alpha = 0.5;
+    [self setEnabled:NO];
+}
+
+//- (void)setSelected:(BOOL)selected{
+//    if (selected) {
+//        [self.layer setShadowColor:[UIColor lightGreenSeaColor].CGColor];
+//        [self.layer setShadowOpacity:1];
+//    } else {
+//        [self.layer setShadowColor:[UIColor blackColor].CGColor];
+//        [self.layer setShadowOpacity:0.25];
+//    }
+//}
 
 @end

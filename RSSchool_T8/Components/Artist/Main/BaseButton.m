@@ -32,30 +32,34 @@
     }
 }
 
-- (void)setEnabled:(BOOL)enabled{
-    if (!enabled) {
-        [self setAlpha:0.5];
-        [self setUserInteractionEnabled:NO];
-    } else {
-        [self setAlpha:1];
-        [self setUserInteractionEnabled:YES];
-    }
-}
+//- (void)setEnabled:(BOOL)enabled{
+//    if (!enabled) {
+//        [self setAlpha:0.5];
+//        [self setUserInteractionEnabled:NO];
+//    } else {
+//        [self setAlpha:1];
+//        [self setUserInteractionEnabled:YES];
+//    }
+//}
 
 -(void)setEnabledState{
-    self.layer.shadowRadius   = 4.0;
+    self.layer.shadowRadius   = 2.0;
     self.layer.shadowColor    = [[UIColor blackColor] CGColor];
     self.layer.shadowOpacity  = 0.25;
     self.alpha                = 1;
     self.titleLabel.textColor = [UIColor lightGreenSeaColor];
+    
     [self setEnabled:YES];
+    [self setUserInteractionEnabled:YES];
 }
 -(void)setDisabledState{
     self.layer.shadowRadius   = 2.0;
     self.layer.shadowColor    = [[UIColor blackColor] CGColor];
     self.layer.shadowOpacity  = .25;
     self.alpha = 0.5;
-    [self setEnabled:NO];
+    
+    [self setEnabled: NO];
+    [self setUserInteractionEnabled:NO];
 }
 
 //- (void)setSelected:(BOOL)selected{

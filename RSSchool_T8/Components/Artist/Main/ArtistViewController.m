@@ -91,11 +91,12 @@
     
     [self.PaletteButton addTarget:self action:@selector(showPallete) forControlEvents:UIControlEventTouchUpInside];
     [self.DrawButton addTarget:self action:@selector(drawImage) forControlEvents:UIControlEventTouchUpInside];
-    [self.ShareButton setEnabled:NO];
+    
+    [self.ShareButton addTarget:self action:@selector(shareImage) forControlEvents:UIControlEventTouchUpInside];
     [self.TimerButton addTarget:self action:@selector(showTimer) forControlEvents:UIControlEventTouchUpInside];
     
     
-    
+    [self.ShareButton setDisabledState];
     
     
 }
@@ -162,10 +163,11 @@
         [self setLayersStrokeEndTo:stroke];
         if (stroke >= 1)  {
             [timer invalidate];
-            
+
             
             [self.DrawButton setEnabledState];
             [self.ShareButton setEnabledState];
+            
             self.DrawButton.titleLabel.text = @"Reset";
             
         }
@@ -236,6 +238,16 @@
     
     [self.navigationController pushViewController:vc animated:YES];
     
+}
+
+-(void)shareImage{
+    UIGraphicsBeginImageContext(_canvas.frame.size);
+    [_canvas.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *canvasImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    NSData *pngData = UIImagePNGRepresentation(canvasImage);
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[pngData] applicationActivities:nil];
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 @end

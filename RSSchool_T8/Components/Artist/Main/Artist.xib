@@ -17,7 +17,7 @@
             <connections>
                 <outlet property="DrawButton" destination="1p6-Ir-Qpy" id="mDI-rh-KKw"/>
                 <outlet property="PaletteButton" destination="agK-5G-aKT" id="s9d-Tc-E4H"/>
-                <outlet property="ShareButton" destination="93z-6t-DIc" id="D88-Bd-764"/>
+                <outlet property="ShareButton" destination="Qal-vN-qj0" id="yAA-QN-yGJ"/>
                 <outlet property="TimerButton" destination="3kZ-Gw-m3B" id="GuM-sd-EOX"/>
                 <outlet property="canvas" destination="ZTL-bq-0PQ" id="WZR-1y-WvO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="mqg-A6-BPB"/>
@@ -52,20 +52,20 @@
                         <color key="titleColor" red="0.12941176470588234" green="0.69019607843137254" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93z-6t-DIc" customClass="BaseButton">
-                    <rect key="frame" x="239" y="506" width="95" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
-                    <state key="normal" title="Share">
-                        <color key="titleColor" red="0.12941176470588234" green="0.69019607843137254" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agK-5G-aKT" customClass="BaseButton">
                     <rect key="frame" x="20" y="454" width="163" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
                     <state key="normal" title="Open Palette">
                         <color key="titleColor" red="0.12941176470588234" green="0.69019607843137254" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Qal-vN-qj0" customClass="BaseButton">
+                    <rect key="frame" x="243" y="505" width="91" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                    <state key="normal" title="Share">
+                        <color key="titleColor" red="0.12941176469999999" green="0.69019607839999997" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>
             </subviews>

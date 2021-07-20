@@ -120,6 +120,8 @@
         
         [self setLayersStrokeEndTo:0];
         
+        [self.DrawButton setTitle:@"Draw" forState:UIControlStateNormal];
+        
         
         return;
     }
@@ -165,10 +167,18 @@
             [timer invalidate];
 
             
-            [self.DrawButton setEnabledState];
             [self.ShareButton setEnabledState];
             
-            self.DrawButton.titleLabel.text = @"Reset";
+            self.DrawButton.layer.shadowRadius   = 2.0;
+            self.DrawButton.layer.shadowColor    = [[UIColor blackColor] CGColor];
+            self.DrawButton.layer.shadowOpacity  = 0.25;
+            self.DrawButton.alpha                = 1;
+            self.DrawButton.titleLabel.textColor = [UIColor lightGreenSeaColor];
+            self.DrawButton.userInteractionEnabled = YES;
+            [self.DrawButton setEnabled:YES];
+            
+            
+            [self.DrawButton setTitle:@"Reset" forState:UIControlStateNormal];
             
         }
     }];

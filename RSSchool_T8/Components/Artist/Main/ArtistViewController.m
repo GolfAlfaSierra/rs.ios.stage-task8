@@ -46,8 +46,12 @@
     [NSNotificationCenter.defaultCenter addObserverForName:@"app-timer-saved" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
         NSLog(@"%@",note);
         
+        id num = [note.userInfo valueForKey:@"time"];
         
-        self->_timerValue = 0 ; // TODO
+        float number = [[NSNumber numberWithDouble:[num floatValue]] floatValue];
+
+        
+        self->_timerValue = number;
     }];
     
     [NSNotificationCenter.defaultCenter addObserverForName:@"app-drawing-saved" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
@@ -66,9 +70,7 @@
         }
         if ([drawi isEqualToString:@"Tree"]) {
             self->_drawing = DrawingTree;
-        }
-        
-//        self->_drawing =  ;// TODO
+        }[note.userInfo valueForKey:@"time"];
     }];
     
     [NSNotificationCenter.defaultCenter addObserverForName:@"app-color-saved" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
@@ -178,6 +180,7 @@
     vc.modalPresentationStyle = UIModalPresentationCustom;
     
     vc.transitioningDelegate = vc;
+    [vc setTimerSliderValueWithVal:_timerValue];
     
     [self presentViewController:vc animated:YES completion:nil];
 

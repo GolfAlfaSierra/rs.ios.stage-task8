@@ -25,6 +25,8 @@ import UIKit
         
         
         
+        
+        
         tree = (self.view.subviews.first?.subviews[0] as! UIButton)
         landscape = (self.view.subviews.first?.subviews[1] as! UIButton)
         head = (self.view.subviews.first?.subviews[2] as! UIButton)
@@ -102,16 +104,17 @@ import UIKit
     
     func drawingTypeText(drawing: SelectedDrawing) -> String {
         switch drawing {
-        case .DrawingHead:
-            return "Head"
-        case .DrawingLandscape:
-            return "Landscape"
-        case .DrawingPlanet:
-            return "Planet"
-        case .DrawingTree:
-            return "Tree"
+            case .DrawingHead:
+                return "Head"
+            case .DrawingLandscape:
+                return "Landscape"
+            case .DrawingPlanet:
+                return "Planet"
+            case .DrawingTree:
+                return "Tree"
+        @unknown default:
+            fatalError()
         }
-        
     }
 }
 
@@ -139,3 +142,4 @@ class DrawingButton:UIButton {
     
     
 }
+

@@ -12,7 +12,7 @@ public class TimerViewController: UIViewController {
     @IBOutlet weak var saveTimer: UIButton!
     @IBOutlet weak var ChosenTime: UILabel!
     @IBOutlet weak var timerSlider: UISlider!
-    
+    private var timerVal: Float = 1.0
     public override func viewDidLoad() {
         self.view.layer.cornerRadius = 40
         self.view.layer.shadowOffset = CGSize.zero
@@ -25,20 +25,25 @@ public class TimerViewController: UIViewController {
         
         timerSlider.addTarget(self, action: #selector(didChangeOwnValue), for: .valueChanged)
         
+        timerSlider.value = timerVal
         
-        
-        ChosenTime.text =  "\(timerSlider.value)"
+        ChosenTime.text =  NSString(format: "%.2f s", timerSlider.value) as String
     }
     
     @objc func didChangeOwnValue(){
         ChosenTime.text = NSString(format: "%.2f s", timerSlider.value) as String
         
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "app-timer"), object: ChosenTime)
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "app-timer"), object: ChosenTime)
 
     }
     
     @objc func dismissView() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "app-timer-saved"), object: ChosenTime, userInfo: ["time": timerSlider.value])
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func setTimerSliderValue(val: Float){
+        self.timerVal = val
     }
 }
 

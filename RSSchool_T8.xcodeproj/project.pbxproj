@@ -19,6 +19,7 @@
 		6E3DA95E26A5C46600B52834 /* Drawing.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3DA95D26A5C46600B52834 /* Drawing.xib */; };
 		6E3DA96E26A5E64600B52834 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA96D26A5E64600B52834 /* TimerViewController.swift */; };
 		6E3DA97226A5E88300B52834 /* Timer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3DA97126A5E88300B52834 /* Timer.xib */; };
+		6E3DA97C26A6C71300B52834 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3DA97B26A6C71300B52834 /* NSMutableArray+Shuffle.m */; };
 		6EA7448D26A17C8300FAAEF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */; };
 		6EA7449826A17C8600FAAEF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449726A17C8600FAAEF1 /* Assets.xcassets */; };
 		6EA7449B26A17C8600FAAEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7449926A17C8600FAAEF1 /* LaunchScreen.storyboard */; };
@@ -54,6 +55,8 @@
 		6E3DA95D26A5C46600B52834 /* Drawing.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Drawing.xib; sourceTree = "<group>"; };
 		6E3DA96D26A5E64600B52834 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		6E3DA97126A5E88300B52834 /* Timer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Timer.xib; sourceTree = "<group>"; };
+		6E3DA97A26A6C71300B52834 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
+		6E3DA97B26A6C71300B52834 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 		6EA7448826A17C8300FAAEF1 /* RSSchool_T8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA7448B26A17C8300FAAEF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6EA7448C26A17C8300FAAEF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				6EA744FD26A3125E00FAAEF1 /* UIButton+AppButton.m */,
 				6EA744D426A1E5FC00FAAEF1 /* UIColor+AppColor.h */,
 				6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */,
+				6E3DA97A26A6C71300B52834 /* NSMutableArray+Shuffle.h */,
+				6E3DA97B26A6C71300B52834 /* NSMutableArray+Shuffle.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				6EA744F126A2FD7500FAAEF1 /* ArtistView.m in Sources */,
 				6EA744FE26A3125E00FAAEF1 /* UIButton+AppButton.m in Sources */,
 				6EA7449E26A17C8600FAAEF1 /* main.m in Sources */,
+				6E3DA97C26A6C71300B52834 /* NSMutableArray+Shuffle.m in Sources */,
 				6EA744E026A2F58200FAAEF1 /* CanvasView.m in Sources */,
 				6E3DA94826A49E1400B52834 /* BaseButton.m in Sources */,
 				6E3DA92A26A4728B00B52834 /* HalfPresentationController.m in Sources */,

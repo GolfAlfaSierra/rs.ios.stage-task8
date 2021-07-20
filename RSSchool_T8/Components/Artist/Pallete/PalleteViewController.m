@@ -8,6 +8,7 @@
 #import "PalleteViewController.h"
 #import "HalfPresentationController.h"
 #import "ColorButton.h"
+#import "NSMutableArray+Shuffle.h"
 
 
 @interface PalleteViewController ()
@@ -18,13 +19,25 @@
 @property (weak, nonatomic) IBOutlet UIView *rowOne;
 @property (weak, nonatomic) IBOutlet UIView *rowTwo;
 
-//@property (strong, nonatomic) NSMutableArray *selectedColors;
 
 
 
 @end
 
 @implementation PalleteViewController
+
+
+- (NSArray<UIColor *> *)getColors{
+    NSMutableArray *colors = [NSMutableArray array];
+    [selectedColors enumerateObjectsUsingBlock:^(ColorButton*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        UIColor *color = [[[obj subviews] firstObject] backgroundColor];
+        [colors addObject:color];
+    }];
+    
+    [colors shuffle];
+    return colors;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,7 +51,7 @@
     
     
     
-    [NSNotificationCenter.defaultCenter addObserverForName:@"app-Color" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
+    [NSNotificationCenter.defaultCenter addObserverForName:@"app-color" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
         NSLog(@"%@", [note object]);
         
         ColorButton *button = [note object];
@@ -51,15 +64,7 @@
             [self removeColor:color];
             [button setUnChecked];
         }
-        
-        
-//        NSLog(@"%@", [button getColor]);
-        
-//        [button isChecked];
     }];
-    
-    
-//    [self.view setBackgroundColor:UIColor.redColor];
     
     [self.closeButton addTarget:self action:@selector(setupButton) forControlEvents:UIControlEventTouchUpInside];
     
@@ -105,11 +110,13 @@
         [colorView.subviews.firstObject setBackgroundColor:colors[counter]];
         ++counter;
     }
-
+    
 }
 -(void)setupButton{
     
-    [NSNotificationCenter.defaultCenter postNotificationName:@"app-colors-saved" object:selectedColors];
+    NSArray *selected = [self getColors];
+    
+    [NSNotificationCenter.defaultCenter postNotificationName:@"app-color-saved" object:selected];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

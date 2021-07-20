@@ -24,6 +24,14 @@
 
 
 - (void)drawHeadWithColors:(NSArray<UIColor*>*)colors {
+    NSMutableArray<UIColor*> *kolors = [NSMutableArray arrayWithArray:colors];
+    
+    while ([kolors count] < 3) {
+        UIColor *col = [UIColor blackColor];
+        
+        [kolors addObject:col];
+    }
+    
     [self.strokeLayer1 removeFromSuperlayer];
     [self.strokeLayer2 removeFromSuperlayer];
     [self.strokeLayer3 removeFromSuperlayer];
@@ -31,21 +39,21 @@
     self.strokeLayer1.strokeEnd = 0;
     self.strokeLayer1.path = [Head getHeadChinVector].CGPath;
     self.strokeLayer1.fillColor = UIColor.clearColor.CGColor;
-    self.strokeLayer1.strokeColor = colors[0].CGColor;
+    self.strokeLayer1.strokeColor = kolors[0].CGColor;
     self.strokeLayer1.lineWidth = 1.0;
     self.strokeLayer1.position = CGPointMake(61.5, 29);
     
     self.strokeLayer2.strokeEnd = 0;
     self.strokeLayer2.path = [Head getLipsHeadVector].CGPath;
     self.strokeLayer2.fillColor = UIColor.clearColor.CGColor;
-    self.strokeLayer2.strokeColor = colors[1].CGColor;
+    self.strokeLayer2.strokeColor = kolors[1].CGColor;
     self.strokeLayer2.lineWidth = 1.0;
     self.strokeLayer2.position = CGPointMake(118, 81);
     
     self.strokeLayer3.strokeEnd = 0;
     self.strokeLayer3.path = [Head getHeadNeckVector].CGPath;
     self.strokeLayer3.fillColor = UIColor.clearColor.CGColor;
-    self.strokeLayer3.strokeColor = colors[2].CGColor;
+    self.strokeLayer3.strokeColor = kolors[2].CGColor;
     self.strokeLayer3.lineWidth = 1.0;
     self.strokeLayer3.position = CGPointMake(63.5, 102.5);
     

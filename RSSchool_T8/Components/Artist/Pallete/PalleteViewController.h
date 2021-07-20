@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PalleteViewController : UIViewController <UIViewControllerTransitioningDelegate>
 
+
+
 @end
 
 NS_ASSUME_NONNULL_END

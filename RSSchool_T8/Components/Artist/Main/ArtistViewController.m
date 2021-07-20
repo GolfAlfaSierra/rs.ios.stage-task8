@@ -35,22 +35,42 @@
     [self setupNavigation];
     
     selectedColors = @[UIColor.blackColor, UIColor.blackColor, UIColor.blackColor];
+    self.timerValue = 1;
+    self.drawing = DrawingHead;
     
-    [NSNotificationCenter.defaultCenter addObserverForName:@"app-colors-saved" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
+    
+    
+    [NSNotificationCenter.defaultCenter addObserverForName:@"app-timer-saved" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
         NSLog(@"%@",note);
         
-        self->selectedColors = [note object];
+        
+        self->_timerValue = 0 ; // TODO
     }];
     
-    self.timerValue = 1;
+    [NSNotificationCenter.defaultCenter addObserverForName:@"app-drawing-saved" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
+        NSLog(@"%@",note);
+        
+        self->_drawing = DrawingHead ;// TODO
+    }];
+    
+    [NSNotificationCenter.defaultCenter addObserverForName:@"app-color-saved" object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
+        NSLog(@"%@",note);
+        
+        self->selectedColors = [note object] ;
+    }];
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
     [self.PaletteButton addTarget:self action:@selector(showPallete) forControlEvents:UIControlEventTouchUpInside];
-    
     [self.DrawButton addTarget:self action:@selector(drawImage) forControlEvents:UIControlEventTouchUpInside];
-    
-    
     [self.ShareButton setEnabled:NO];
     [self.TimerButton addTarget:self action:@selector(showTimer) forControlEvents:UIControlEventTouchUpInside];
     

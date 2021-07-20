@@ -57,7 +57,7 @@
         
     }
     
-    [NSNotificationCenter.defaultCenter postNotificationName:@"app-Color" object:self userInfo:nil];
+    [NSNotificationCenter.defaultCenter postNotificationName:@"app-color" object:self userInfo:nil];
     
 }
 

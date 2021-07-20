@@ -42,4 +42,14 @@
     }
 }
 
+- (void)setSelected:(BOOL)selected{
+    if (selected) {
+        [self.layer setShadowColor:[UIColor lightGreenSeaColor].CGColor];
+        [self.layer setShadowOpacity:1];
+    } else {
+        [self.layer setShadowColor:[UIColor blackColor].CGColor];
+        [self.layer setShadowOpacity:0.25];
+    }
+}
+
 @end

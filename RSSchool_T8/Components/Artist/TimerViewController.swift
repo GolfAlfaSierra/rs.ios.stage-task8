@@ -31,7 +31,9 @@ public class TimerViewController: UIViewController {
     }
     
     @objc func didChangeOwnValue(){
-        ChosenTime.text = NSString(format: "%.2f", timerSlider.value) as String
+        ChosenTime.text = NSString(format: "%.2f s", timerSlider.value) as String
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "app-timer"), object: ChosenTime)
 
     }
     

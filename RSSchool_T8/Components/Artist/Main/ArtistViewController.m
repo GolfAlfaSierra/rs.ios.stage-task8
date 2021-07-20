@@ -110,8 +110,6 @@
 -(void)drawImage{
     if ([self.DrawButton.titleLabel.text isEqualToString:@"Reset"]) {
         
-        
-        
         [self.DrawButton setEnabledState];
         [self.ShareButton setDisabledState];
         [self.PaletteButton setEnabledState];
@@ -231,7 +229,7 @@
 -(void)showDrawings{
     DrawingViewController *vc = [[DrawingViewController alloc] initWithNibName:@"Drawing" bundle:nil];
 
-    
+    [vc setDrawingWithDraw:self.drawing];
     
     [self.navigationController pushViewController:vc animated:YES];
     

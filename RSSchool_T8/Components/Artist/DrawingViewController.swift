@@ -10,7 +10,7 @@ import UIKit
 
 @objc public class DrawingViewController: UIViewController {
     
-    private var selectedDrawing: SelectedDrawing = .DrawingHead
+    var selectedDrawing: SelectedDrawing = .DrawingHead
     
     private var selected = false
     private var selectedButton: UIButton!
@@ -24,14 +24,24 @@ import UIKit
         self.title = "Drawings"
         
         
-        landscape = (self.view.subviews.first?.subviews[0] as! UIButton)
-        head = (self.view.subviews.first?.subviews[1] as! UIButton)
-        tree = (self.view.subviews.first?.subviews[2] as! UIButton)
+        
+        tree = (self.view.subviews.first?.subviews[0] as! UIButton)
+        landscape = (self.view.subviews.first?.subviews[1] as! UIButton)
+        head = (self.view.subviews.first?.subviews[2] as! UIButton)
         planet = (self.view.subviews.first?.subviews[3] as! UIButton)
         
-        selectedButton = head
         
-        selectState(button: tree)
+        let buttons = self.view.subviews.first!.subviews as! [DrawingButton]
+        
+        let drawingName = drawingTypeText(drawing: selectedDrawing)
+        
+        buttons.forEach({ v in
+            if v.titleLabel?.text == drawingName {
+                selectState(button: v)
+            }
+        })
+        
+        //        selectState(button: tree)
         
         
         
@@ -52,6 +62,10 @@ import UIKit
         notifyDrawingSelected()
     }
     
+    @objc func setDrawing(draw: SelectedDrawing){
+        self.selectedDrawing = draw
+    }
+    
     func notifyDrawingSelected() {
         let drawing = drawingName(button: selectedButton)
         
@@ -68,16 +82,16 @@ import UIKit
         unselectState(button: tree)
         unselectState(button: landscape)
         
-//        button.layer.shadowColor = UIColor.lightGreenSea().cgColor
-//        button.layer.shadowOpacity = 1
+        //        button.layer.shadowColor = UIColor.lightGreenSea().cgColor
+        //        button.layer.shadowOpacity = 1
         selectState(button: button)
     }
     
     
     func selectState(button: UIButton) {
         button.layer.shadowColor = UIColor.lightGreenSea().cgColor
-                button.layer.shadowOpacity = 1
-
+        button.layer.shadowOpacity = 1
+        
     }
     
     func unselectState(button: UIButton) {
@@ -85,6 +99,20 @@ import UIKit
         button.layer.shadowOpacity = 0.25
     }
     
+    
+    func drawingTypeText(drawing: SelectedDrawing) -> String {
+        switch drawing {
+        case .DrawingHead:
+            return "Head"
+        case .DrawingLandscape:
+            return "Landscape"
+        case .DrawingPlanet:
+            return "Planet"
+        case .DrawingTree:
+            return "Tree"
+        }
+        
+    }
 }
 
 class DrawingButton:UIButton {
@@ -108,7 +136,6 @@ class DrawingButton:UIButton {
         layer.shadowRadius = 2
     }
     
-   
+    
     
 }
-

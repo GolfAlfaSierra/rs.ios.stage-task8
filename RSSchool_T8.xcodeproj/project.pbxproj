@@ -29,12 +29,12 @@
 		6EA7449E26A17C8600FAAEF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7449D26A17C8600FAAEF1 /* main.m */; };
 		6EA744B326A17E7000FAAEF1 /* ArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */; };
 		6EA744B726A1808700FAAEF1 /* Artist.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744B626A1808700FAAEF1 /* Artist.xib */; };
-		6EA744C126A1837400FAAEF1 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744BA26A1830A00FAAEF1 /* Montserrat-Medium.ttf */; };
-		6EA744C226A1837400FAAEF1 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EA744BB26A1830A00FAAEF1 /* Montserrat-Regular.ttf */; };
 		6EA744D626A1E5FC00FAAEF1 /* UIColor+AppColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */; };
 		6EA744E026A2F58200FAAEF1 /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744DF26A2F58200FAAEF1 /* CanvasView.m */; };
 		6EA744F126A2FD7500FAAEF1 /* ArtistView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744F026A2FD7500FAAEF1 /* ArtistView.m */; };
 		6EA744FE26A3125E00FAAEF1 /* UIButton+AppButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA744FD26A3125E00FAAEF1 /* UIButton+AppButton.m */; };
+		6EFC278D26A8599400F5DC5E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC278B26A8599400F5DC5E /* Montserrat-Regular.ttf */; };
+		6EFC278E26A8599400F5DC5E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EFC278C26A8599400F5DC5E /* Montserrat-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,8 +76,6 @@
 		6EA744B126A17E7000FAAEF1 /* ArtistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistViewController.h; sourceTree = "<group>"; };
 		6EA744B226A17E7000FAAEF1 /* ArtistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistViewController.m; sourceTree = "<group>"; };
 		6EA744B626A1808700FAAEF1 /* Artist.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Artist.xib; sourceTree = "<group>"; };
-		6EA744BA26A1830A00FAAEF1 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.ttf"; path = "../../../../../Downloads/RSSchool_T8_Fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		6EA744BB26A1830A00FAAEF1 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../Downloads/RSSchool_T8_Fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		6EA744D426A1E5FC00FAAEF1 /* UIColor+AppColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppColor.h"; sourceTree = "<group>"; };
 		6EA744D526A1E5FC00FAAEF1 /* UIColor+AppColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppColor.m"; sourceTree = "<group>"; };
 		6EA744DE26A2F58200FAAEF1 /* CanvasView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
@@ -86,6 +84,8 @@
 		6EA744F026A2FD7500FAAEF1 /* ArtistView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistView.m; sourceTree = "<group>"; };
 		6EA744FC26A3125E00FAAEF1 /* UIButton+AppButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+AppButton.h"; sourceTree = "<group>"; };
 		6EA744FD26A3125E00FAAEF1 /* UIButton+AppButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AppButton.m"; sourceTree = "<group>"; };
+		6EFC278B26A8599400F5DC5E /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		6EFC278C26A8599400F5DC5E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,8 +174,8 @@
 		6EA744B926A182EF00FAAEF1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				6EA744BA26A1830A00FAAEF1 /* Montserrat-Medium.ttf */,
-				6EA744BB26A1830A00FAAEF1 /* Montserrat-Regular.ttf */,
+				6EFC278C26A8599400F5DC5E /* Montserrat-Medium.ttf */,
+				6EFC278B26A8599400F5DC5E /* Montserrat-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -300,11 +300,11 @@
 			files = (
 				6EA7449B26A17C8600FAAEF1 /* LaunchScreen.storyboard in Resources */,
 				6E3DA91F26A4222C00B52834 /* Pallete.xib in Resources */,
+				6EFC278D26A8599400F5DC5E /* Montserrat-Regular.ttf in Resources */,
 				6EA744B726A1808700FAAEF1 /* Artist.xib in Resources */,
 				6E3DA97226A5E88300B52834 /* Timer.xib in Resources */,
 				6E3DA95E26A5C46600B52834 /* Drawing.xib in Resources */,
-				6EA744C126A1837400FAAEF1 /* Montserrat-Medium.ttf in Resources */,
-				6EA744C226A1837400FAAEF1 /* Montserrat-Regular.ttf in Resources */,
+				6EFC278E26A8599400F5DC5E /* Montserrat-Medium.ttf in Resources */,
 				6EA7449826A17C8600FAAEF1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
